@@ -5,10 +5,10 @@
             <div class="container-inner p-60 mt-60">
                 <h2 class="like-h1 mb-30">@lang('text.catalog-of-products') <span>nordan</span></h2>
                 <div class="catalog">
-                    <form action="{{route('api-get-products')}}" metod="post" id="form-catalog">
+                    <form action="{{route('catalog')}}" metod="post" id="form-catalog">
                         @csrf
-                    @if(count($collection))
                     <div class="catalog-filters">
+                        @if(count($collection))
                         <div class="input-group" id="collection">
                             <h5>@lang('text.collection')</h5>
                             <div class="container-select">
@@ -20,6 +20,7 @@
                                 </select>
                             </div>
                         </div>
+                        @endif
                         @if(count($types))
                         <div class="input-group" id="type">
                             <h5>@lang('text.for_whoe')</h5>
@@ -82,7 +83,6 @@
                         </div>
                         @endif
                     </div>
-                    @endif
                     </form>
                     <div class="catalog-items">
                         <div class="flex">

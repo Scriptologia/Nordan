@@ -20,6 +20,7 @@
           padding: 15px;
         }
       & > img {
+        object-fit: contain;
         width: auto;
         height:30%;
       }

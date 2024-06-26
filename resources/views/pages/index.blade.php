@@ -47,27 +47,27 @@
             <div class="container-inner p-60">
                 <div class="collection">
                     <div class="collection_item">
-                        <img src="{{asset('images/img/men.png')}}" alt="">
+                        <img src="{{asset('images/img/girl.jpg')}}" alt="">
                         <div class="collection_item-info">
-                            <h3 class="title">женская Коллекция <span>nordan</span></h3>
-                            <div class="description">элегантность, стиль, роскошь, свобода</div>
-                            <a class="link"  href="/catalog?collection=1">Перейти в каталог<i class="icon-li-arrow2"></i></a>
+                            <h3 class="title">@lang('text.child_collection') <span>nordan</span></h3>
+                            <div class="description">@lang('text.text_collection')</div>
+                            <a class="link"  href="/catalog?collection=1">@lang('text.go-catalog')<i class="icon-li-arrow2"></i></a>
                         </div>
                     </div>
                     <div class="collection_item">
                         <img src="{{asset('images/img/men.png')}}" alt="">
                         <div class="collection_item-info">
-                            <h3 class="title">женская Коллекция <span>nordan</span></h3>
-                            <div class="description">элегантность, стиль, роскошь, свобода</div>
-                            <a class="link"  href="/catalog?collection=2">Перейти в каталог<i class="icon-li-arrow2"></i></a>
+                            <h3 class="title">@lang('text.women_collection') <span>nordan</span></h3>
+                            <div class="description">@lang('text.text_collection')</div>
+                            <a class="link"  href="/catalog?collection=2">@lang('text.go-catalog')<i class="icon-li-arrow2"></i></a>
                         </div>
                     </div>
                     <div class="collection_item">
                         <img src="{{asset('images/img/men.png')}}" alt="">
                         <div class="collection_item-info">
-                            <h3 class="title">женская Коллекция <span>nordan</span></h3>
-                            <div class="description">элегантность, стиль, роскошь, свобода</div>
-                            <a class="link" href="/catalog?collection=3">Перейти в каталог<i class="icon-li-arrow2"></i></a>
+                            <h3 class="title">@lang('text.man_collection') <span>nordan</span></h3>
+                            <div class="description">@lang('text.text_collection')</div>
+                            <a class="link" href="/catalog?collection=3">@lang('text.go-catalog')<i class="icon-li-arrow2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -81,67 +81,67 @@
                         <div class="property-img">
                             <img src="{{asset('images/img/property1.png')}}" alt="">
                         </div>
-                        <h4 class="property-text"><span>100%</span> оригинальная продукция</h4>
+                        <h4 class="property-text">@lang('text.property_1')</h4>
                     </div>
                     <div class="property">
                         <div class="property-img">
                             <img src="{{asset('images/img/property2.png')}}" alt="">
                         </div>
-                        <h4 class="property-text">только <span>комфортная</span> обувь</h4>
+                        <h4 class="property-text">@lang('text.property_2')</h4>
                     </div>
                     <div class="property">
                         <div class="property-img">
                             <img src="{{asset('images/img/property3.png')}}" alt="">
                         </div>
-                        <h4 class="property-text"><span>Экологически</span> чистый продукт</h4>
+                        <h4 class="property-text">@lang('text.property_3')</h4>
                     </div>
                     <div class="property">
                         <div class="property-img">
                             <img src="{{asset('images/img/property4.png')}}" alt="">
                         </div>
-                        <h4 class="property-text"><span>нескользящая</span> подошва</h4>
+                        <h4 class="property-text">@lang('text.property_3')</h4>
                     </div>
                 </div>
             </div>
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30">Цикл <span>производства</span> обуви</h2>
+                <h2 class="like-h1 mb-30">@lang('text.cycle.title')</h2>
                 <div class="flex">
                     <div class="cycle">
                         <div class="cycle-img">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text"><b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</div>
+                        <div class="cycle-text">@lang('text.cycle.text_1')</div>
                         <div class="cycle-div">
-                            <h2 class="like-h1">1 этап</h2>
+                            <h2 class="like-h1">@lang('text.cycle.etap_1')</h2>
                         </div>
                     </div>
                     <div class="cycle">
                         <div class="cycle-img">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text"><b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</div>
+                        <div class="cycle-text">@lang('text.cycle.text_2')</div>
                         <div class="cycle-div">
-                            <h2 class="like-h1">2 этап</h2>
+                            <h2 class="like-h1">@lang('text.cycle.etap_2')</h2>
                         </div>
                     </div>
                     <div class="cycle">
                         <div class="cycle-img">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text"><b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</div>
+                        <div class="cycle-text">@lang('text.cycle.text_3')</div>
                         <div class="cycle-div">
-                            <h2 class="like-h1">3 этап</h2>
+                            <h2 class="like-h1">@lang('text.cycle.etap_3')</h2>
                         </div>
                     </div>
                     <div class="cycle">
                         <div class="cycle-img">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text"><b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.</div>
+                        <div class="cycle-text">@lang('text.cycle.text_4')</div>
                         <div class="cycle-div">
-                            <h2 class="like-h1">4 этап</h2>
+                            <h2 class="like-h1">@lang('text.cycle.etap_4')</h2>
                         </div>
                     </div>
                 </div>
@@ -149,14 +149,14 @@
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30"><span>nordan</span>  значит качество</h2>
+                <h2 class="like-h1 mb-30">@lang('text.is_quality')</h2>
                 <div class="presentation">
                 </div>
             </div>
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30">мы <span>заботимся</span> о природе</h2>
+                <h2 class="like-h1 mb-30">@lang('text.nature.title')</h2>
                 <div class="nature">
                     <div class="nature-left">
                         <img src="{{asset('images/img/squerell.jpg')}}" alt="">
@@ -164,27 +164,27 @@
                     <div class="nature-right">
                         <div class="nature-right_item"><i class="icon-li-nature1"></i>
                             <div class="nature-right_item_text">
-                                <h4>полностью <span>электронный</span> документооборот</h4>
+                                <h4>@lang('text.nature.text_1')</h4>
                             </div>
                         </div>
                         <div class="nature-right_item"><i class="icon-li-nature2"></i>
                             <div class="nature-right_item_text">
-                                <h4>все отходы разделяем и сдаём на <span>переработку</span></h4>
+                                <h4>@lang('text.nature.text_2')</h4>
                             </div>
                         </div>
                         <div class="nature-right_item"><i class="icon-li-nature3"></i>
                             <div class="nature-right_item_text">
-                                <h4>только <span>электронные</span> чеки</h4>
+                                <h4>@lang('text.nature.text_3')</h4>
                             </div>
                         </div>
                         <div class="nature-right_item"><i class="icon-li-nature4"></i>
                             <div class="nature-right_item_text">
-                                <h4><span>сокращаем</span> количество упаковочного материала</h4>
+                                <h4>@lang('text.nature.text_4')</h4>
                             </div>
                         </div>
                         <div class="nature-right_item"><i class="icon-li-nature5"></i>
                             <div class="nature-right_item_text">
-                                <h4>участие в <span>экологических</span> акциях</h4>
+                                <h4>@lang('text.nature.text_5')</h4>
                             </div>
                         </div>
                     </div>
