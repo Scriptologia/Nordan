@@ -37,6 +37,10 @@ return [
     'footer_politic' => 'Политика конфиденциальности',
     'footer_rights' => 'Все права защищены',
     'to-catalog' => 'В каталог',
+    'product_of_category' => 'товары из <span>категории</span>',
+    'recomendation_nordan' => 'рекомендации <span>nordan</span>',
+    'new_products_of_nortan' => 'новинки <span>nordan</span> для Вас',
+
     'price' => 'Цена',
     'adress' => 'Адрес',
     'region' => 'Регион',

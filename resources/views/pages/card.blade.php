@@ -45,88 +45,89 @@
                 </div>
             </div>
         </section>
-        <section class="container-liquid">
-            <div class="container-inner p-60 mb-60">
-                <h2 class="like-h1 mb-30">товары из <span>категории</span></h2>
-                <div class="flex">
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="assets/images/img/legs.jpg" alt="">
-                        </div>
-                        <h5>туфли nordan</h5>
-                        <div class="description">мужские, весенняя коллекция</div>
-                        <div class="icons">
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                        </div>
-                        <a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>
-                    </div>
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="assets/images/img/legs.jpg" alt="">
-                        </div>
-                        <h5>туфли nordan</h5>
-                        <div class="description">мужские, весенняя коллекция</div>
-                        <div class="icons">
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                        </div>
-                        <a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>
-                    </div>
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="assets/images/img/legs.jpg" alt="">
-                        </div>
-                        <h5>туфли nordan</h5>
-                        <div class="description">мужские, весенняя коллекция</div>
-                        <div class="icons">
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                        </div>
-                        <a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>
-                    </div>
-                    <div class="product">
-                        <div class="product-img">
-                            <img src="assets/images/img/legs.jpg" alt="">
-                        </div>
-                        <h5>туфли nordan</h5>
-                        <div class="description">мужские, весенняя коллекция</div>
-                        <div class="icons">
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                            <div class="icons_item">
-                                <img src="assets/images/img/image2.png" alt="">
-                            </div>
-                        </div>
-                        <a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('partials.recomendation', [ 'title' => __('text.product_of_category'), 'filter' => 'type', 'filterParams' => $product->type->id])
+        {{--<section class="container-liquid">--}}
+            {{--<div class="container-inner p-60 mb-60">--}}
+                {{--<h2 class="like-h1 mb-30">@lang('text.product_of_category')</h2>--}}
+                {{--<div class="flex">--}}
+                    {{--<div class="product">--}}
+                        {{--<div class="product-img">--}}
+                            {{--<img src="assets/images/img/legs.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<h5>туфли nordan</h5>--}}
+                        {{--<div class="description">мужские, весенняя коллекция</div>--}}
+                        {{--<div class="icons">--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>--}}
+                    {{--</div>--}}
+                    {{--<div class="product">--}}
+                        {{--<div class="product-img">--}}
+                            {{--<img src="assets/images/img/legs.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<h5>туфли nordan</h5>--}}
+                        {{--<div class="description">мужские, весенняя коллекция</div>--}}
+                        {{--<div class="icons">--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>--}}
+                    {{--</div>--}}
+                    {{--<div class="product">--}}
+                        {{--<div class="product-img">--}}
+                            {{--<img src="assets/images/img/legs.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<h5>туфли nordan</h5>--}}
+                        {{--<div class="description">мужские, весенняя коллекция</div>--}}
+                        {{--<div class="icons">--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>--}}
+                    {{--</div>--}}
+                    {{--<div class="product">--}}
+                        {{--<div class="product-img">--}}
+                            {{--<img src="assets/images/img/legs.jpg" alt="">--}}
+                        {{--</div>--}}
+                        {{--<h5>туфли nordan</h5>--}}
+                        {{--<div class="description">мужские, весенняя коллекция</div>--}}
+                        {{--<div class="icons">--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                            {{--<div class="icons_item">--}}
+                                {{--<img src="assets/images/img/image2.png" alt="">--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<a href="" class="link">к товару<i class="icon-li-arrow2"></i></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</section>--}}
     </main>
 @endsection

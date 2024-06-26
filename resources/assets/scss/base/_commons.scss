@@ -51,7 +51,9 @@ footer {}
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.jus-center {
+  justify-content: center !important;
+}
 .center {
   text-align: center !important;
 }

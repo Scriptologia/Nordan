@@ -110,7 +110,7 @@
                 </div>
             </div>
         </section>
-        @include('partials.recomendation', ['buttonLink' => "/catalog", 'title' => 'новинки <span>nordan</span> для Вас', 'filter' => 'recomendation'])
+        @include('partials.recomendation', ['buttonLink' => route('api-get-products'), 'title' => __('text.new_products_of_nortan')])
         <section class="container-liquid">
             <div class="container-inner p-60">
                 <div class="flex">
@@ -228,6 +228,6 @@
                 </div>
             </div>
         </section>
-        @include('partials.recomendation', [ 'title' => 'рекомендации <span>nordan</span>'])
+        @include('partials.recomendation', [ 'title' => __('text.recomendation_nordan'), 'filter' => 'recomendation'])
     </main>
 @endsection

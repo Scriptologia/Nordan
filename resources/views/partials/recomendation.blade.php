@@ -1,6 +1,7 @@
 @php
     $products = \App\Models\Product::withTranslation(app()->getLocale());
-    if(!empty($filter)) $products = $products->where($filter,'1');
+    if(!empty($filter) && $filter == 'recomendation') $products = $products->where($filter,'1');
+    if(!empty($filter) && $filter == 'type' && !empty($filterParams) ) $products = $products->where($filter.'_id', $filterParams);
 $products = $products->latest()->take(6)->get();
 @endphp
 @if(count($products))
@@ -24,12 +25,14 @@ $products = $products->latest()->take(6)->get();
                     @endforeach
                 </div>
                 @endif
-                <a href="{{route('card', $product)}}" class="link">@lang('text.to-product')<i class="icon-li-arrow2"></i></a>
+                    <a href="{{route('card', $product)}}" class="link">@lang('text.to-product')<i class="icon-li-arrow2"></i></a>
             </div>
             @endforeach
         </div>
         @if(!empty($buttonLink))
+        <div class="flex jus-center">
         <a href="{{$buttonLink}}" class="btn btn-orange mt-40">@lang('text.to-catalog')</a>
+        </div>
             @endif
     </div>
 </section>
