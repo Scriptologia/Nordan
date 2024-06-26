@@ -1,0 +1,117 @@
+.main-slider {
+  height: $height-slider;
+  overflow:hidden;
+  position: relative;
+  width: 100%;
+  @include md(){
+    height:581px;
+    //height:$height-slider-mobile;
+    width: 100%;
+    //aspect-ratio:.974;
+  }
+  &_slider  {
+    height:inherit;
+    width: 100%;
+    @include md(){
+      //height:$height-slider-mobile;
+    }
+    &-item {
+      position: relative;
+      height:inherit;
+      width: inherit;
+      @include md(){
+        height:581px;
+      }
+
+      & > img {
+        object-fit: cover;
+        filter: brightness(0.8);
+        height: inherit;
+        width: inherit;
+      }
+      & > .info {
+        position: absolute;
+        left: 40rem;
+        top:165rem;
+        width:890rem;
+        @include md(){
+          width:100%;
+          height:100%;
+          left:0;
+          top:0;
+          padding:40rem 20rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        & .info-name {
+          color: $white;
+          padding-left: 20rem;
+          border-left: 10rem solid $orange;
+          @include md(){
+            border-left:unset;
+            padding-left: unset;
+          }
+        }
+        & .info-text {
+          color: $white;
+          font-size: 24rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin:40rem 0;
+          @include md(){
+            font-size: 16px;
+            margin:20px 0;
+          }
+        }
+        & .btn:first-of-type {
+          margin-right: 20rem;
+          @include md(){
+            margin-right: unset;
+            margin-bottom:20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dots-items {
+  position: absolute;
+  bottom:165rem;
+  left:40rem;
+  @include md(){
+    bottom:40px;
+    width:100%;
+    left:unset;
+  }
+  &_list {
+    display:flex;
+    margin: 0 auto;
+    width: fit-content;
+    & > li {
+      cursor:pointer;
+      &.slick-active .dot {
+        background: $white;
+      }
+      &:not(:last-child) {
+        margin-right: 16rem;
+        @include md(){
+          margin-right: 10px;
+        }
+      }
+      & > .dot {
+        width: 16rem;
+        height: 16rem;
+        background: transparent;
+        border: 1px solid $white;
+        @include md(){
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}

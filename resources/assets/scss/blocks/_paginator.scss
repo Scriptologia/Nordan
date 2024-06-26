@@ -1,0 +1,57 @@
+.paginator {
+  text-align: center;
+  &_block {
+    display: inline-flex;
+    align-items: center;
+    & > *:not(:last-child) {
+      margin-right: 20rem;
+    }
+    &_next, &_previous {
+      width: 36rem;
+      height: 36rem;
+      @include md (){
+      }
+      &:hover {
+        & > i {
+          background: $orange;
+        }
+      }
+      &>i {
+        background: $main;
+        width: 24rem;
+        height: 24rem;
+        @include md (){
+        }
+      }
+    }
+    &_next {
+      transform: rotate(-90deg);
+    }
+    &_previous {
+      transform: rotate(90deg);
+    }
+    &_number {
+      color: $main;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      &:hover , &.active {
+        color: $orange;
+      }
+      @include md (){
+      }
+    }
+    &_points {
+      color: $main;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      @include md (){
+      }
+    }
+  }
+}

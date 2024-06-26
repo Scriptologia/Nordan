@@ -1,0 +1,124 @@
+footer {
+  flex: 0 0 auto;
+}
+.footer {
+  display: flex;
+  padding:40rem 0;
+  justify-content: space-between;
+  @include md (){
+    padding:20px 0;
+  }
+  &-info {
+    width:465rem;
+    @include md (){
+      width:100%;
+      text-align: center;
+    }
+    &_logo {
+      display: inline-flex;
+      align-items: center;
+      & > img:first-child{
+      width: 64rem;
+      height: 60rem;
+      @include md (){
+        width: 43px;
+        height: 40px;
+      }
+      }
+      & > img:last-child {
+        width: 136px;
+        height: 26px;
+      @include md (){
+        width: 90px;
+        height: 17px;
+      }
+      }
+    }
+    &_copyright {
+      color: $white;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-top:20rem;
+      @include md(){
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        margin-top:20px;
+      }
+    }
+    &_link {
+      color: $white;
+      font-size: 20rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-top:20rem;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+      @include md (){
+        margin-top:20px;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+      }
+    }}
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    @include md (){
+      display: none;
+    }
+    &_block {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      &>h4 {
+        color:$white;
+        margin-bottom: 20rem;
+      }
+      &>a {
+        color: $white;
+        font-size: 16rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: inline-block;
+        &:not(:last-child) {
+          margin-bottom: 15rem;
+        }
+        &.active,&:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-2 {
+    padding:40rem 0;
+    text-align: center;
+    @include md (){
+      display: none;
+    }
+    &_text {
+      color: $white;
+      font-size: 18rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+    }
+    & > img {
+      margin-top:20rem;
+      width:762rem;
+      height:141rem;
+    }
+  }
+}

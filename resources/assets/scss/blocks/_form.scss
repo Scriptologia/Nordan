@@ -1,0 +1,280 @@
+/* Customize the label (the container) */
+.container {
+ display: inline-block;
+ position: relative;
+ padding-left: 30rem;
+ margin-bottom: 12rem;
+ cursor: pointer;
+ color: $main;
+ font-size: 16rem;
+ font-style: normal;
+ font-weight: 500;
+ line-height: normal;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 20rem;
+ height: 20rem;
+ background-color: $white;
+ border-radius: 5rem;
+ border: 1rem solid $grey2;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+ background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+ background-color: $orange;
+ border: 1rem solid $orange;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+ display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+ left: 6rem;
+ top: 2rem;
+ width: 5rem;
+ height: 10rem;
+ border: solid white;
+ border-width: 0 3rem 3rem 0;
+ -webkit-transform: rotate(45deg);
+ -ms-transform: rotate(45deg);
+ transform: rotate(45deg);
+}
+
+//SELECT
+//.container-select {
+// width: 100%;
+// margin: 1.2rem 0;
+// position: relative;
+//  & #announcement {
+//  opacity: 0;
+//  pointer-events: none;
+// }
+//  & label {
+//  display: block;
+//  padding: 20rem;
+//  width: 65%;
+//  margin: 0 auto;
+//  text-align: left;
+//  font-size: 24rem;
+// }
+//  & select,
+//  & button,
+//  & ul{
+//   border-radius: 10rem;
+//   border: 1rem solid $grey2;
+//  display: block;
+//  padding: 20rem;
+//  width: 100%;
+//  margin: 0 auto;
+//  text-align: left;
+//  background: $white;
+//  font-size: 16rem;
+// }
+//  & button{
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  position: relative;
+//
+//  &::before {
+//   content: url(../images/icons/arrow.svg);
+//   vertical-align: middle;
+//   font-weight: 900;
+//   position: absolute;
+//   right: 20rem;
+//   width: 20rem;
+//   height: 20rem;
+//  }
+//
+//  &:focus-visible {
+//   outline: 0;
+//   // outline-offset: -3rem;
+//   box-shadow: 0 0 5rem 2rem rgba(251, 146, 60, 0.7) inset;
+//  }
+// }
+// ul {
+//  color: $main;
+//  position: absolute;
+//  left: 0;
+//  right: 0;
+//  top: 0rem;
+//  max-height: 305rem;
+//  overflow-y: auto;
+//  list-style-type: none;
+//  padding: 0;
+//  margin-top: .1rem;
+//  opacity: 0;
+//  transform: scale(1,0);
+//  transform-origin: top left;
+//  transition: all .3s ease-in;
+//  pointer-events: none;
+//  z-index: 2;
+//  &.active {
+//   opacity: 1;
+//   transform: scale(1,1);
+//   pointer-events: auto;
+//  }
+//  li {
+//   padding: 20rem;
+//   cursor: pointer;
+//   transition: all .3s ease-in;
+//   position: relative;
+//   &:first-child {
+//    //border-bottom: 1rem solid $grey2;
+//    &::after {
+//     position: absolute;
+//     bottom:0;
+//     left:5%;
+//     right:5%;
+//     width:90%;
+//     height:1rem;
+//     content:' ';
+//     background: $grey2;
+//    }
+//   }
+//   &.current::before {
+//    content: url(../images/icons/arrow.svg);
+//    vertical-align: middle;
+//    font-weight: 900;
+//    position: absolute;
+//    right: 20rem;
+//    width: 20rem;
+//    height: 20rem;
+//    //opacity: 0;
+//    transition: opacity .300s ease-out;
+//   }
+//   //&.current,
+//   &:hover {
+//    background: $grey2;
+//   }
+//   &.active {
+//    // border: 2rem solid;
+//    box-shadow: 0 0 0 2rem rgba(251, 146, 60, 0.7);
+//   }
+//   &.active::before {
+//    opacity: 1;
+//   }
+//  }
+// }
+//}
+
+/*the container must be positioned relative:*/
+.container-select {
+ position: relative;
+ width: 100%;
+}
+
+.container-select select {
+ display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+ overflow:hidden;
+ border-radius: 10rem;
+ border: 1rem solid $grey2;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+ position: absolute;
+ content: url(../images/icons/arrow.svg);
+ top: 50%;
+ transform: translateY(-50%) scale(.5);
+ right: 20rem;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+ position: absolute;
+ content: url(../images/icons/arrow.svg);
+ top: 50%;
+ transform: translateY(-50%) scale(.5);
+ right: 20rem;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+ color: $main;
+ padding: 20rem 20rem;
+ cursor: pointer;
+ user-select: none;
+ background: $white;
+ font-size: 16rem;
+ font-style: normal;
+ font-weight: 500;
+ line-height: normal;
+}
+.select-selected.select-arrow-active {
+ border-radius:5rem 5rem 0 0 ;
+ position:relative;
+ border-width: 1rem 1rem 0 1rem;
+ border-style: solid;
+ border-color: $grey2;
+}
+.select-selected.select-arrow-active::before {
+ content:' ' ;
+ height:2rem;
+ position:absolute;
+ left:5%;
+ right:5%;
+ bottom:0;
+ width:80%;
+ background:$grey2;
+}
+/*style items (options):*/
+.select-items {
+ position: absolute;
+ background-color: $grey;
+ top: 100%;
+ left: 0;
+ right: 0;
+ z-index: 99;
+ overflow:hidden;
+ border-radius:0 0 10rem 10rem;
+ border-width: 0 1rem 1rem 1rem;
+ border-style: solid;
+ border-color: $grey2;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+ display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+ background-color: rgba(0, 0, 0, 0.1);
+}
+//END SELECT

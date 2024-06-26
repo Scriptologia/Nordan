@@ -1,0 +1,175 @@
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  display:flex;
+  flex-direction:column;
+  font-family: 'Golos_Text';
+}
+
+header {
+  width:100%;
+}
+main {flex: 1 0 auto;}
+footer {}
+
+.container {
+  width: 100%;
+  &-liquid {
+    //background-color: $white2;
+  }
+  &-inner {
+    //box-sizing: border-box;
+    max-width: 1920px;
+    width: 1920px;
+    margin: 0 auto;
+    padding-left:40rem;
+    padding-right:40rem;
+    @include max () {
+      width: 100%;
+      max-width: 100%;
+    }
+    @include md () {
+      padding-left:20rem;
+      padding-right:20rem;
+      max-width:100%;
+      width: 100%;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  overflow: hidden;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center !important;
+}
+
+
+.bg-main {
+  background-color: $main;
+}
+.bg-black {
+  background-color: $black;
+}
+
+.pt-40 {
+  padding-top: 40rem;
+  @include md {
+    padding-top: 40rem;
+  }
+}
+.mt-40 {
+  margin-top: 40rem;
+  @include md {
+    margin-top: 40rem;
+  }
+}
+.mb-30 {
+  margin-bottom: 30rem;
+  @include md {
+    margin-bottom: 30rem;
+  }
+}
+.mb-60 {
+  margin-bottom: 60rem;
+  @include md {
+    margin-bottom: 60rem;
+  }
+}
+.mt-60 {
+  margin-top: 60rem;
+  @include md {
+    margin-top: 60rem;
+  }
+}
+.mx-60 {
+  margin: 60rem 0;
+  @include md {
+    margin: 60rem 0;
+  }
+}
+.pb-30 {
+  padding-bottom: 30rem;
+  @include md {
+    padding-bottom: 30rem;
+  }
+}
+//.pb-80 {
+//  padding-bottom: 80rem;
+//  @include md {
+//    padding-bottom: 80px;
+//  }
+//}
+//.pt-80 {
+//  padding-top: 80rem;
+//  @include md {
+//    padding-top: 80px;
+//  }
+//}
+//.p-40 {
+//  padding-top: 40rem;
+//  padding-bottom: 40rem;
+//  @include md() {
+//    padding-top: 40px;
+//    padding-bottom: 40px;
+//  }
+//}
+
+.p-x-0 {
+  padding: unset !important;
+}
+.p-60 {
+  padding-top: 60rem;
+  padding-bottom: 60rem;
+  @include md() {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.pb-60 {
+  padding-bottom: 60rem;
+  @include md() {
+    padding-bottom: 60px;
+  }
+}
+
+.link {
+  color: $main;
+  font-size: 16rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3.2rem;
+  text-transform: uppercase;
+  @include md(){
+    font-size: 14rem;
+  }
+  &> i {
+    width: 20rem;
+    height: 20rem;
+    margin-left: 6rem;
+    background: $main;
+  }
+  &:hover {
+    color:$orange !important;
+    &>i {
+      background: $orange !important;
+    }
+  }
+}
+
+* {
+  transition: all .3s ease-in-out;
+}

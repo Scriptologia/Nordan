@@ -1,0 +1,467 @@
+/*главное меню*/
+.header {
+  padding: 20rem 0;
+  display: flex;
+  box-sizing: border-box;
+  height: $height-menu;
+  background-color: $main;
+  justify-content: space-between;
+  align-items: center;
+  &-icon {
+    padding-left:10rem;
+    &> a {
+      display: inline-flex;
+      align-items: center;
+      margin-right:80rem;
+      &>img:nth-child(1) {
+        width: 64rem;
+        height:60rem;
+        margin-right:4rem;
+  @include md () {
+    height:40px;
+    width: 43px;
+    margin-right:3px;
+  }
+      }
+      &>img:nth-child(2) {
+        width: 136rem;
+        height:26rem;
+        @include md () {
+          height:17px;
+          width: 90px;
+        }
+      }
+    }
+  }
+  &-mail {
+    display: inline-flex;
+    align-items: center;
+    flex: 1 0 auto;
+    color: $white;
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 210rem;
+    margin-right: 40rem;
+    @include md {
+      display:none;
+    }
+    &.active, &:hover {
+      text-decoration: underline;
+    }
+    &>i {
+      background: $white;
+      width:37rem;
+      height:37rem;
+      margin-right:10rem;
+      &.active, &:hover {
+        background: $orange;
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex: 1 0 auto;
+    @include md {
+      display:none;
+    }
+    & >.search {
+      position: relative;
+      margin-right: 20rem;
+      &>i {
+        background: $white;
+        width:37rem;
+        height:37rem;
+        cursor:pointer;
+      }
+      & .search-form {
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+        right: 0%;
+        border-radius: 25rem;
+        height: 50rem;
+        background: $white;
+        width: 556rem;
+        z-index: 10;
+        overflow: hidden;
+        display: none;
+        & form {
+          height: 100%;
+          overflow: hidden;
+          display: flex;
+          & .search-btn {
+            height: inherit;
+            display: inline-block;
+            width: 50rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &>i {
+              background: $main;
+              width: 37rem;
+              height: 37rem;
+            }
+          }
+          & .search-text {
+            height: inherit;
+            flex:1 0 auto;
+            outline: none;
+            border: unset;
+            color: $main;
+            font-size: 26rem;
+            padding: 13rem 0 13rem 13rem;
+          }
+        }
+      }
+    }
+    & > .heart {
+      margin-right: 20rem;
+      width: 24rem;
+      height: 24rem;
+      &> i {
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+    & .lang {
+      width: 58rem;
+      height: 24rem;
+      display: inline-flex;
+      position:relative;
+      align-items: center;
+      display: flex;
+      &:hover {
+        cursor:pointer;
+        //&>i {
+        //  background-color:$main-grey;
+        //}
+      }
+      &-name {
+        color: $white;
+        font-size: 20rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        //&:hover {
+        //  color: $main;
+        //}
+      }
+      &>i {
+        margin-left:5rem;
+        height: 75%;
+        width: 75%;
+        background-color:$white;
+      }
+      &-lists {
+        position: absolute;
+        left: 0;
+        top: 30rem;
+        background-color: $white;
+        border:1px solid $white;
+        border-radius:5px;
+        width: 100%;
+        z-index: 100;
+        padding: 5rem;
+        box-shadow: $shadow;
+        display:none;
+        @include md {
+          padding: 5px;
+          top: 20px;
+        }
+      }
+      &-list {
+        &_item {
+          color: $main-grey;
+          font-size: 20rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          display: block;
+          text-transform: uppercase;
+          &:hover {
+            color: $main-blue;
+          }
+          &:not(:last-child){
+            margin-bottom:5rem;
+          }
+          @include md {
+            font-size: 20px;
+            &:not(:last-child){
+              margin-bottom:5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include md () {
+    height:$mobile-header;
+  }
+  //@include usd () {
+  //  height:$ultra-mobile-header;
+  //  margin: 20px 0;
+  //}
+}
+ .menu {
+   @include md {
+     display:none;
+   }
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      &_item {
+        color: $white;
+        font-size: 16rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-right: 40rem;
+        &.active, &:hover {
+          text-decoration: underline;
+        }
+      }
+
+   &-mobile{
+     overflow: scroll;
+     position: fixed;
+     position: absolute;
+     padding: 0 20px;
+     //height: 100vh;
+     margin-left: -100vw;
+     left:0;
+     width:100vw;
+     display:none;
+     z-index:1000;
+     background-color:$main;
+     transition: margin 0.5s ease-in-out;
+     overflow-x: hidden;
+     overflow-y: auto;
+     @include md () {
+       display:block;
+       top:#{$mobile-header};
+       height: calc(100vh - #{$mobile-header});
+     }
+     //@include usd () {
+     //  display:block;
+     //  top:calc(#{$ultra-mobile-header} + 40px);
+     //  height: calc(100vh - #{$ultra-mobile-header} + 40px);
+     //}
+     & > .search-form {
+       height:40px;
+       width:100%;
+       &> form {
+         display: flex;
+         height: 100%;
+         & > .search-text {
+           height: inherit;
+           flex:1 0 auto;
+           outline: none;
+           border: unset;
+           color: $white;
+           font-size: 16px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: normal;
+           text-transform: uppercase;
+           padding: 10px;
+           background: $main;
+           border-bottom: 1px solid $white;
+         }
+         & > .search-btn {
+           margin-right: 20px;
+           height: inherit;
+           display: inline-block;
+           width: 24px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           &>i {
+             width: 24px;
+             height: 24px;
+             background: $white;
+             cursor:pointer;
+           }
+         }
+       }
+     }
+     &-list {
+       background: $main;
+       display: flex;
+       flex-direction: column;
+       margin-top:40px;
+       &_item {
+         color: $white;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: normal;
+         text-transform: uppercase;
+         &:not(:last-child){
+           margin-bottom:20px;
+         }
+         &.active, &:hover {
+           text-decoration: underline;
+         }
+       }
+     }
+
+     & >.lang {
+       width: 51px;
+       height: 24px;
+       display: inline-flex;
+       position:relative;
+       align-items: center;
+       cursor:pointer;
+       display: flex;
+       margin-top:40px;
+       & i {
+         margin-left: 5px;
+         height: 75%;
+         width: 75%;
+         background-color: $white;
+       }
+       & .lang-name {
+         color: $white;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: normal;
+         text-transform: uppercase;
+         &:hover {
+           color: $orange;
+         }
+       }
+       & .lang-lists {
+         position: absolute;
+         left: 0;
+         top: 30px;
+         background-color: $white;
+         border:1px solid $white;
+         border-radius:5px;
+         width: 100%;
+         z-index: 100;
+         padding: 5rem;
+         display:none;
+       }
+       & .lang-list {
+         &_item {
+           color: $main-grey;
+           font-size: 20px;
+           font-style: normal;
+           font-weight: 500;
+           line-height: normal;
+           display: block;
+           text-transform: uppercase;
+           &:hover {
+             color: $main-blue;
+           }
+           &:not(:last-child){
+             margin-bottom:5rem;
+           }
+         }
+       }
+     }
+     &-mail {
+       margin-top:40px;
+       display: inline-flex;
+       align-items: center;
+       flex: 1 0 auto;
+       color: $white;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 400;
+       line-height: normal;
+       text-transform: uppercase;
+       &.active, &:hover {
+         text-decoration: underline;
+       }
+       &>i {
+         background: $white;
+         width: 24px;
+         height: 24px;
+         margin-right:10px;
+         &.active, &:hover {
+           background: $orange;
+         }
+       }
+     }
+     &.open {
+       @include md () {
+         margin-left:0px;
+       }
+     }
+   }
+
+    /*burger */
+    &-burger {
+      border:unset !important;
+      display: none;
+      @include md {
+        position: relative;
+        display: block;
+        width: $burger-width;
+        height: $burger-height;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        & > span, &:after, &:before {
+          height: $burger-line;
+          width: 100%;
+          position: absolute;
+          background: $white;
+          margin: 0 auto;
+        }
+        & > span {
+          opacity: 1;
+          transition: 0.5s;
+        }
+        &:after, &:before {
+          content: '';
+          transform: rotate(0);
+          transition: 0.4s;
+        }
+        &:after {
+          bottom: 0;
+        }
+        &:before {
+          top: 0;
+        }
+        &.open-menu span {
+          opacity: 0;
+        }
+        &.open-menu:before {
+          transform: rotate(45deg);
+          top: calc(#{$burger-height}/2.3);
+        }
+        &.open-menu:after {
+          transform: rotate(-45deg);
+          bottom: calc(#{$burger-height}/2.3);
+        }
+      }
+      //@include usd {
+      //  width: 32rem;
+      //  height: 32rem;
+      //  & > span, &:after, &:before {
+      //    height: 4rem;
+      //  }
+      //  &.open-menu:before {
+      //    top: calc(32rem/2.3);
+      //  }
+      //  &.open-menu:after {
+      //    bottom: calc(32rem/2.3);
+      //  }
+      //}
+    }
+  }

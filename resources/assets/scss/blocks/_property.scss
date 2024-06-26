@@ -1,0 +1,52 @@
+.property {
+  width: 445rem;
+  height: 250rem;
+  border-radius: 10rem;
+  background: $grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:20rem;
+  @include md(){
+    width:48.5%;
+    aspect-ratio:1.68;
+    height: auto;
+    &:nth-child(1), &:nth-child(2){
+      margin-bottom:20rem;
+    }
+  }
+  @include usd(){
+    width:100%;
+    aspect-ratio:1.68;
+    height: auto;
+    &:not(:last-child){
+      margin-bottom:20rem;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+    border-radius: 11rem;
+    background: $yellow;
+    box-shadow: $shadow;
+  }
+  &-img {
+    width: 120rem;
+    height: 120rem;
+    @include md(){}
+    @include usd(){
+      width: 90rem;
+      height: 90rem;
+    }
+    &>img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-text {
+    height: 60rem;
+    @include usd(){
+      height: 40rem;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.btn {
+  width: 290rem;
+  height: 70rem;
+  border-radius: 10rem;
+  font-size: 24rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include md(){
+    width: 240rem;
+    height:50rem;
+    font-size:16rem;
+  }
+  @include usd(){
+    width: 240rem;
+    height:50rem;
+    font-size:16rem;
+  }
+  &:hover {
+    background: $white;
+    color: $main-blue;
+    border: 1px solid $main-blue;
+  }
+
+  &-pink {
+    color: $white;
+    background: $pink;
+    border: 1px solid $pink;
+    &:hover {
+      color: $orange;
+      background: transparent;
+      border: 1px solid $orange;
+    }
+  }
+  &-blue {
+    color: $white;
+    background: $blue;
+    border: 1px solid $blue;
+    &:hover {
+      color: $orange;
+      background: transparent;
+      border: 1px solid $orange;
+    }
+  }
+  &-orange {
+    color: $white;
+    background: $orange;
+    border: 1px solid $orange;
+    &:hover {
+      color: $orange;
+      background: transparent;
+      border: 1px solid $orange;
+    }
+  }
+  &-orange2 {
+    color: $white;
+    background: $orange2;
+    border: 1px solid $orange2;
+    &:hover {
+      color: $orange;
+      background: transparent;
+      border: 1px solid $orange;
+    }
+  }
+  &-transparent {
+    color: $white;
+    background: transparent;
+    border: 1px solid $white;
+    &:hover {
+      color: $orange;
+      background: transparent;
+      border: 1px solid $orange;
+    }
+  }
+}

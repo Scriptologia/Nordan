@@ -1,0 +1,74 @@
+.nature {
+  display: flex;
+  @include md(){}
+  @include usd(){}
+  &-left {
+    margin-right: 20rem;
+    overflow: hidden;
+    width: 910rem;
+    height: 790rem;
+    border-radius: 0rem 10rem 10rem 0rem;
+    @include md(){
+      display: none;
+    }
+    @include usd(){
+    }
+    &>img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+  &-right {
+    width: 910rem;
+    height: 790rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include md(){
+      width: 100%;
+      height: auto;
+    }
+    @include usd(){}
+    &_item {
+      width: 48.5%;
+      aspect-ratio:1.78;
+      border-radius: 10rem;
+      background: $main;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding:20rem;
+      &:not(:last-child) {
+        margin-bottom:20rem;
+      }
+      @include md(){}
+      @include usd(){
+        aspect-ratio:1.684;
+        width: 100%;
+      }
+      &> i {
+        width: 120rem;
+        height: 120rem;
+        background: $orange;
+        @include md(){}
+        @include usd(){
+          width: 90rem;
+          height: 90rem;
+          flex-shrink: 0;
+        }
+      }
+      &_text {
+        height: 60rem;
+        @include md(){}
+        @include usd(){
+          height: 40rem;
+        }
+        &>h4 {
+          color:$white;
+        }
+      }
+    }
+  }
+}

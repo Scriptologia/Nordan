@@ -1,0 +1,78 @@
+@mixin icon-i($name) {
+  background-image: url('../images/icons/#{$name}');
+}
+@mixin icon-li($name) {
+  @include before-prefix (mask, url('../images/icons/#{$name}')) ;
+  @include before-prefix (  mask-size, contain) ;
+  @include before-prefix (  mask-repeat, no-repeat) ;
+}
+
+[class*="icon-i"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+[class*="icon-li"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//.icon-i-logo { @include icon-i('logo.svg'); }
+//.icon-i-logo2 { @include icon-i('logo2.svg'); }
+//.icon-i-point { @include icon-i('point.svg'); }
+//.icon-i-mail { @include icon-i('mail.svg'); }
+//.icon-i-phone { @include icon-i('phone.svg'); }
+//.icon-li-point { @include icon-li('point.svg'); }
+.icon-li-mail { @include icon-li('mail.svg'); }
+//.icon-li-phone { @include icon-li('phone.svg'); }
+//.icon-i-vk { @include icon-i('vk.svg'); }
+//.icon-i-viber { @include icon-i('viber.svg'); }
+//.icon-i-telegram { @include icon-i('telegram.svg'); }
+//.icon-i-whatsapp2 { @include icon-i('whatsapp2.svg'); }
+//
+//.icon-li-viber { @include icon-li('viber.svg'); }
+//.icon-li-telegram { @include icon-li('telegram.svg'); }
+//
+//.icon-i-whatsapp { @include icon-i('whatsapp.svg'); }
+//.icon-i-telegram2 { @include icon-i('telegram2.svg'); }
+//.icon-li-whatsapp { @include icon-li('whatsapp.svg'); }
+//.icon-li-telegram2 { @include icon-li('telegram2.svg'); }
+//
+//.icon-i-yandex { @include icon-i('yandex.svg'); }
+//.icon-i-google { @include icon-i('google.svg'); }
+//.icon-i-2gis { @include icon-i('2gis.svg'); }
+//.icon-i-zoon { @include icon-i('zoon.svg'); }
+//.icon-i-quot { @include icon-i('quot.svg'); }
+//
+//.icon-i-ok { @include icon-i('ok.svg'); }
+//.icon-i-important { @include icon-i('important.svg'); }
+
+.icon-i-label { @include icon-i('label.svg'); }
+.icon-i-date { @include icon-i('date.svg'); }
+
+//.icon-li-clock { @include icon-li('clock.svg'); }
+//.icon-li-medal { @include icon-li('medal.svg'); }
+//.icon-li-french { @include icon-li('french.svg'); }
+//.icon-li-shield { @include icon-li('shield.svg'); }
+//.icon-li-gift { @include icon-li('gift.svg'); }
+//.icon-li-important2 { @include icon-li('important2.svg'); }
+.icon-li-facebook { @include icon-li('facebook.svg'); }
+.icon-li-download { @include icon-li('download.svg'); }
+
+//.icon-li-paginator-arrow-next { @include icon-li('paginator-arrow-next.svg'); }
+//.icon-li-paginator-arrow-previous { @include icon-li('paginator-arrow-previous.svg'); }
+.icon-li-arrow { @include icon-li('arrow.svg'); }
+.icon-li-people { @include icon-li('people.svg'); }
+.icon-li-place { @include icon-li('place.svg'); }
+.icon-li-date { @include icon-li('date.svg'); }
+.icon-li-heart { @include icon-li('heart.svg'); }
+.icon-li-search { @include icon-li('search.svg'); }
+.icon-li-arrow2 { @include icon-li('arrow2.svg'); }
+.icon-li-nature1 { @include icon-li('nature1.svg'); }
+.icon-li-nature2 { @include icon-li('nature2.svg'); }
+.icon-li-nature3 { @include icon-li('nature3.svg'); }
+.icon-li-nature4 { @include icon-li('nature4.svg'); }
+.icon-li-nature5 { @include icon-li('nature5.svg'); }

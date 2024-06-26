@@ -1,0 +1,224 @@
+.product  {
+  display: flex;
+  flex-direction: column;
+  padding: 20rem;
+  background:$white2;
+  //width: 45rem;
+  width: 445rem;
+  aspect-ratio:.621;
+  //height: 716rem;
+  overflow: hidden;
+  @include md(){
+    &:not(:last-child){
+      margin-bottom: 20rem;
+    }
+    width: 50%;
+  }
+  @include usd(){
+    width: 100%;
+  }
+  &-img {
+    width: 100%;
+    //height: 485rem;
+    aspect-ratio:.835;
+    border-radius: 10rem;
+    margin-bottom: 20rem;
+    overflow: hidden;
+    @include md(){
+    }
+    @include usd(){
+    }
+    &>img {
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+  &>h5 {
+    margin-bottom: 10rem;
+  }
+  & > .description {
+    color: $main;
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 20rem;
+    @include md(){
+      font-size: 14rem;
+    }
+  }
+  & > .icons {
+    margin-bottom: 44rem;
+    @include md(){
+    }
+    & .icons_item {
+      display: inline-block;
+      width: 24rem;
+      height: 24rem;
+      border-radius:50%;
+      overflow: hidden;
+      &:not(:last-child){
+        margin-right: 12rem;
+      }
+      &> img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-card {
+    display: flex;
+    @include md(){
+      display: block;
+    }
+    @include usd(){
+    }
+    &-left {
+      width: 49%;
+      padding-right: 20rem;
+      @include md(){
+        width: 100%;
+        margin-bottom: 20rem;
+      }
+      @include usd(){
+      }
+    }
+
+    &-right {
+      width: 51%;
+      display: flex;
+      flex-direction: column;
+      @include md(){
+        width: 100%;
+      }
+      @include usd(){
+      }
+      &-type {
+        color: $grey2;
+        font-size: 16rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-top:20rem;
+      }
+      &> .reiting {
+        display: flex;
+        margin-top:40rem;
+        align-items: center;
+        & > .reiting-stars {
+          &> * {
+            margin-right:10rem;
+            width:48rem;
+            @include usd(){
+              width:16rem;
+            }
+          }
+        }
+        & > .reiting-text {
+          color: $main;
+          font-size: 24rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          @include usd(){
+            font-size: 14rem;
+          }
+        }
+      }
+
+      &-description {
+        margin-top:40rem;
+        margin-bottom:40rem;
+      }
+      &-buttons {
+        margin-bottom:40rem;
+        & .btn:not(:last-child){
+          margin-right:20rem;
+          @include md(){
+            margin-bottom: 20rem;
+          }
+        }
+      }
+      & > .info {}
+    }
+
+    & .info {
+      border-radius: 10rem;
+      background: $grey;
+      padding:20rem;
+      & h4 {
+        margin-bottom: 20rem;
+      }
+      &-list {
+        columns: 2;
+        column-gap: 40rem;
+        column-rule: solid $grey3 1rem;
+        column-fill: auto;
+        max-height: 380rem;
+        @include md(){
+          column-fill: balance;
+        }
+        @include usd(){
+          columns: 1;
+          column-gap: unset;
+          column-rule: unset;
+          max-height: unset;
+        }
+        &_item {
+          font-size: 16rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          &:not(:last-child) {
+            margin-bottom: 20rem;
+          }
+          &> .name {
+            color: $grey2;
+          }
+          &> .value {
+            color: $main;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+
+  &-slider {
+    &-main {
+      width:100%;
+      aspect-ratio:1.264;
+      margin-bottom: 20rem;
+      &> img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
+    }
+    &-nav {
+      //display: flex;
+      //justify-content: space-between;
+      &_item {
+        //width: 290rem;
+        //height: 233rem;
+        border-radius: 10rem;
+        aspect-ratio:1.245;
+        &:not(:last-child) {
+          margin-right:20rem;
+        }
+        &> img {
+          width:100%;
+          height:100%;
+          object-fit:cover;
+        }
+      }
+    }
+  }
+
+}
+

@@ -1,0 +1,145 @@
+.news {
+  display: flex;
+  justify-content: space-between;
+  @include md(){
+    display: block;
+  }
+  @include usd(){
+  }
+  &-left {
+    @include md(){
+      margin-bottom: 40rem;
+    }
+    @include usd(){
+    }
+    &>h2 {
+      margin-bottom: 20rem;
+      color:$main;
+    }
+    & > .counter {
+      color:$orange;
+      width: 445rem;
+      //height: 170rem;
+      text-align: center;
+      border-radius: 10rem;
+      background: $main;
+      padding:40rem;
+      align-items: center;
+      font-size: 112rem;
+      font-weight: 700;
+      line-height: 80%;
+      &:not(:last-child){
+        margin-bottom: 40rem;
+      }
+      @include md(){
+        width: 100%;
+      }
+      @include usd(){
+        font-size: 67rem;
+        height: auto;
+      }
+    }
+  }
+
+  &-right {
+
+    &>h2 {
+      margin-bottom: 20rem;
+      color:$main;
+    }
+    &_items {
+      display: flex;
+      @include md(){
+        display: block;
+      }
+      @include usd(){
+      }
+    }
+
+    & > .btn {
+      margin-top: 40rem;
+    }
+  }
+
+  &_item {
+    display: flex;
+    width: 600rem;
+    aspect-ratio:1.775;
+    border-radius: 10rem;
+    background: $grey;
+    &:not(:last-child) {
+      margin-right: 20rem;
+    }
+    @include md(){
+      width: 100%;
+      margin-right: unset;
+      &:not(:last-child){
+        margin-bottom: 20rem;
+      }
+    }
+    @include usd(){
+    }
+    &-left {
+      width: 48.2%;
+      aspect-ratio:.858;
+      &>img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-right {
+      border-radius: 10rem;
+      background: $grey;
+      padding:20rem;
+      display: flex;
+      flex-direction: column;
+      @include usd(){
+        padding:5rem;
+      }
+      &>h5 {
+        margin-bottom: 20rem;
+        color:$main;
+        @include usd(){
+          margin-bottom: 5rem;
+          font-size: 10rem;
+        }
+      }
+      &>.date {
+        margin-bottom: 20rem;
+        color: $grey3;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        font-size: 16rem;
+        @include usd(){
+          margin-bottom: 5rem;
+          font-size: 10rem;
+        }
+      }
+      &> .text {
+        color: $main;
+        font-size: 16rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        flex: 1 0 auto;
+        @include usd(){
+          margin-bottom: 5rem;
+          font-size: 10rem;
+        }
+      }
+      &> .link {
+        color: $main;
+        @include usd(){
+          font-size: 10rem;
+        }
+        font-size: 10rem;
+        &>i {
+          background: $main;
+        }
+      }
+    }
+  }
+}

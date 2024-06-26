@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-Regular.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-Regular.ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-ExtraBold.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-SemiBold.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-Bold.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-Medium.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Golos_Text';
+  src: url('../fonts/Golos_Text/static/GolosText-Regular.ttf'),
+  url('../fonts/Golos_Text/static/GolosText-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+html {
+  font-size: 1px;
+  @media all and (max-width: #{$pc}px) {
+    font-size: calc(100vw/#{$pc});
+  }
+  @media all and (max-width: #{$mobile}px) {
+    font-size: calc(100vw/#{$mobile});
+  }
+  @media all and (max-width: #{$ultra-mobile}px) {
+    font-size: calc(100vw/#{$ultra-mobile});
+  }
+}
+
+h1, .like-h1 {
+  font-size: 64rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  & > span {color:$orange;}
+  @include md (){
+    font-size: 32rem;
+  }
+}
+
+h2 {
+  font-size: 40rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  & > span {color:$orange;}
+  @include md (){
+    font-size: 24rem;
+  }
+}
+h3 {
+  font-size: 32rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  & > span {color:$orange;}
+  @include usd (){
+    font-size: 17rem;
+  }
+}
+h4 {
+  font-size: 24rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  & > span {color:$orange;}
+  @include md (){
+    font-size: 16rem;
+  }
+}
+h5 {
+  font-size: 20rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  & > span {color:$orange;}
+  @include md (){
+    font-size: 15rem;
+  }
+}
+//h2 {
+//  & > span {color:$orange;}
+//}
+//h3 {
+//  color: $black;
+//  text-align: center;
+//  font-size: 28rem;
+//  font-style: normal;
+//  font-weight: 700;
+//  line-height: normal;
+//  @include md(){
+//    font-size: 20px;
+//}
+//}
+
+//.title {
+//  margin:20rem 0;
+//  @include md (){
+//    margin:15px 0;
+//  }
+//}
+//.description {
+//  margin:20rem 0;
+//  @include md (){
+//    margin:15px 0;
+//  }
+//}
+//.grey-text {
+//  color: $grey;
+//  font-size: 16rem;
+//  font-style: normal;
+//  font-weight: 400;
+//  line-height: 160%;
+//  @include md (){
+//    font-size: 16px;
+//  }
+//}
+
+p {
+  font-size: 20rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  & > span {color:$orange;}
+  @include md (){
+    font-size: 16px;
+  }
+}
+a , a:hover {
+  text-decoration: none;
+  cursor:pointer;
+}
+//a:hover {
+//  color: $main-blue;
+//}

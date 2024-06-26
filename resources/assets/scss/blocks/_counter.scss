@@ -1,0 +1,39 @@
+.counter {
+  padding:40rem 0;
+  display: flex;
+  justify-content: space-between;
+  @include md (){
+    padding:40px 0;
+    display:block;
+  }
+  &-item {
+    border-radius: 10rem;
+    background: $white;
+    width: 340rem;
+    padding:20rem 20rem 36rem 20rem;
+    @include md (){
+      border-radius: 10px;
+      width: 100%;
+      padding:20px 20px 36px 20px;
+      &:not(:last-child) {
+        margin-bottom:20px;
+      }
+    }
+    &_number {
+      color: $main-blue;
+      font-size: 64rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      @include md (){
+        font-size: 45px;
+      }
+    }
+    &_text {
+      margin-top:10rem;
+      @include md (){
+        margin-top:10px;
+      }
+    }
+  }
+}

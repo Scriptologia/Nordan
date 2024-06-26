@@ -1,0 +1,124 @@
+.icon-slider {
+  position: relative;
+  width:100%;
+  overflow: hidden;
+  &_slider {
+    &_item {
+      width: 445rem;
+      border-radius: 10rem;
+      background: $grey;
+      aspect-ratio: 2.079;
+      overflow: hidden;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: space-between;
+      margin:0 20rem;
+      padding: 20rem;
+      @include md(){
+          border-radius: 10px;
+          margin:0 10px;
+          padding: 15px;
+        }
+      & > img {
+        width: auto;
+        height:30%;
+      }
+      & .link {
+        color: $main;
+        font-size: 16rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3.2rem;
+        text-transform: uppercase;
+        @include md(){
+          font-size: 10rem;
+          letter-spacing: 2.2rem;
+        }
+        @include usd(){
+          font-size: 10rem;
+          letter-spacing: 2.2rem;
+        }
+        &:hover {
+          color: $orange;
+          & > i {
+            background: $orange;
+          }
+        }
+        & > i {
+          width:20rem;
+          height:20rem;
+          margin-left:6rem;
+          background: $main;
+          @include md(){
+            width:10px;
+            height:10px;
+            margin-left:5px;
+          }
+        }
+      }
+    }
+  }
+
+  &_dots {
+    position: relative;
+    width: fit-content;
+    margin: 42rem auto;
+    padding: 0 30rem;
+    @include md(){
+      margin-top: 42px;
+      padding: 0 30px;
+    }
+    &_list {
+      display:flex;
+      margin: 0 auto;
+      width: fit-content;
+      & > li {
+        cursor:pointer;
+        &.slick-active .dot {
+          background: $main;
+        }
+        &:not(:last-child) {
+          margin-right: 16rem;
+          @include md(){
+            margin-right: 10px;
+          }
+        }
+        & > .dot {
+          width: 16rem;
+          height: 16rem;
+          background: transparent;
+          border: 1px solid $main;
+          @include md(){
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &_arrow {
+    position: absolute;
+    top:50%;
+    &.prev, &.next {
+      & > i {
+        width:20rem;
+        height:20rem;
+        background-color: $main-blue;
+      }
+      @include md(){
+        width:20px;
+        height:20px;
+      }
+    }
+    &.prev {
+      right:0%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+    &.next {
+      left:0%;
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+}
