@@ -23,7 +23,8 @@ class IndexController extends Controller
 
     public function card(Product $product)
     {
-        $product = $product->translate(app()->getLocale());
+//        $product = $product->withTranslation(app()->getLocale())->get();
+//        $product = $product->translate(app()->getLocale());
 
         return view('pages.card', compact('product'));
     }

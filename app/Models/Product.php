@@ -13,7 +13,7 @@ class Product extends Model implements HasMedia
 {
     use InteractsWithMedia;
     use Translatable;
-    protected $translatable = ['name', 'description', 'parameters'];
+    protected $translatable = ['name', 'description'];
 
     protected $casts = [
         'images '=> 'array',

@@ -98,6 +98,6 @@
 
 @push('script')
     <script>
-        let queryArray = @json($queryArray)
+        let queryArray = @json($queryArray);
     </script>
 @endpush

@@ -1,7 +1,7 @@
 @forelse ($products as $product)
     <div class="product">
         <div class="product-img">
-            <img src="assets/images/img/legs.jpg" alt="">
+            {{$product->getFirstMedia('images') }}
         </div>
         <h5>{!! $product->name !!}</h5>
         <div class="description">{{$product->type->name}}, {{$product->collection->name}}</div>

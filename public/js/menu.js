@@ -4,7 +4,7 @@ $(document).ready(function() {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    setFilters(queryArray = []);
+    setFilters(queryArray);
     //меню бургер
     $('.menu-burger').click(function() {
         $('.menu-burger').toggleClass('open-menu');
@@ -173,6 +173,7 @@ $(document).ready(function() {
     });
 
 function setFilters(queryArray = []){
+    console.log(queryArray, queryArray.type)
     let filters = $('.catalog-filters')
     filters.find('#collection  select').val(queryArray.collection)
     filters.find('#type  select').val(queryArray.type)
