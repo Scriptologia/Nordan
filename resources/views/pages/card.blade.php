@@ -1,3 +1,6 @@
+@php
+$locale = app()->getLocale();
+@endphp
 @extends('layouts.app')
 @section('content')
     <main>
@@ -20,25 +23,34 @@
                         </div>
                     </div>
                     <div class="product-card-right">
-                        <h1>{!! $product->name !!}</h1>
-                        <div class="product-card-right-type">{{$product->type->name}},{{$product->collection->name}}</div>
+                        <h1>{!! $product->translate($locale)->name !!}</h1>
+                        <div class="product-card-right-type">{{$product->type->translate($locale)->name}},{{$product->collection->translate($locale)->name}}</div>
                         {{--<div class="reiting">--}}
                             {{--<div class="reiting-stars" data-score="3"></div>--}}
                             {{--<div class="reiting-text">2313 отзывов</div>--}}
                         {{--</div>--}}
-                        <p class="product-card-right-description">{{$product->description}}</p>
+                        <p class="product-card-right-description">{{$product->translate($locale)->description}}</p>
                         <div class="product-card-right-buttons">
                             @foreach($product->markets as $market)
-                                <a href="{{$market->link}}" class="btn btn-pink">купить на {{$market->name}}</a>
+                                @php
+                                $bg = '';
+                                if($loop->index === 0) $bg = 'btn-pink' ;
+                                if($loop->index === 1) $bg = 'btn-blue' ;
+                                if($loop->index === 2) $bg = 'btn-orange' ;
+                                @endphp
+                                <a href="{{$market->link}}" class="btn {{$bg}}">купить на {{$market->translate($locale)->name}}</a>
                             @endforeach
                         </div>
                         <div class="info">
                             <h4>характеристики товара</h4>
                             <ul class="info-list">
+                                @php
+                                    $locale = app()->getLocale();
+                                @endphp
                                 @foreach(json_decode($product->parameters)->rows as $parameter)
                                     <li class="info-list_item">
-                                        <span class="name">{{str_trans($parameter->name)}}</span>
-                                        <span class="value">{{$parameter->value}}</span>
+                                        <span class="name">{{str_trans($parameter->name, $locale)}}</span>
+                                        <span class="value">{{str_trans($parameter->value, $locale)}}</span>
                                     </li>
                                 @endforeach
                             </ul>
@@ -50,8 +62,3 @@
         @include('partials.recomendation', [ 'title' => __('text.product_of_category'), 'filter' => 'type', 'filterParams' => $product->type->id])
     </main>
 @endsection
-@push('script')
-    <script>
-        let queryArray;
-    </script>
-@endpush

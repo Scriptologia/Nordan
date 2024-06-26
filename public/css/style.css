@@ -413,6 +413,10 @@ main {
   justify-content: space-between;
 }
 
+.jus-center {
+  justify-content: center !important;
+}
+
 .center {
   text-align: center !important;
 }
@@ -1432,6 +1436,7 @@ main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .btn {
@@ -1698,6 +1703,7 @@ main {
   width: 100%;
   aspect-ratio: 1.264;
   margin-bottom: 20rem;
+  overflow: hidden;
 }
 .product-slider-main > img {
   width: 100%;
@@ -2607,6 +2613,7 @@ footer {
   }
 }
 .card > .icons {
+  flex: 1 0 auto;
   margin-bottom: 44rem;
 }
 .card > .icons .icons_item {

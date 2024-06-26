@@ -15,6 +15,6 @@ class HeaderComposer
 {
     public function compose(View $view)
     {
-        return $view->with(['locale' => config('voyager.multilingual.locales')]);
+        return $view->with(['locales' => config('voyager.multilingual.locales')]);
     }
 }

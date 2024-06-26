@@ -4,7 +4,7 @@ $(document).ready(function() {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    setFilters(queryArray);
+    if(typeof queryArray !== "undefined") setFilters(queryArray);
     //меню бургер
     $('.menu-burger').click(function() {
         $('.menu-burger').toggleClass('open-menu');
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $('.menu-mobile-list_item').click(function(e){
         // e.preventDefault();
-        var $this = $(this);
+        let $this = $(this);
         if($this.find(".menu-mobile-list_item_submenu").length == 0) {
             $('.menu-burger').click();
         }
@@ -75,6 +75,7 @@ $(document).ready(function() {
     $('.main-slider_slider').slick({
             dots: true,
             infinite: true,
+        adaptiveHeight: true,
             speed: 300,
             arrows:false,
             autoplay: true,
@@ -102,6 +103,7 @@ $(document).ready(function() {
     $('.icon-slider_slider').slick({
         dots: true,
         infinite: true,
+        adaptiveHeight: true,
         speed: 300,
         // arrows:false,
         // asNavFor: '.icon-slider_slider',
@@ -134,6 +136,7 @@ $(document).ready(function() {
         dots: false,
         infinite: false,
         speed: 300,
+        adaptiveHeight: true,
         // autoplay: true,
         arrows: false,
         fade: true,

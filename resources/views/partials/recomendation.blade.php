@@ -1,8 +1,9 @@
 @php
-    $products = \App\Models\Product::withTranslation(app()->getLocale());
+$locale = app()->getLocale();
+    $products = \App\Models\Product::withTranslation($locale);
     if(!empty($filter) && $filter == 'recomendation') $products = $products->where($filter,'1');
     if(!empty($filter) && $filter == 'type' && !empty($filterParams) ) $products = $products->where($filter.'_id', $filterParams);
-$products = $products->latest()->take(6)->get();
+   $products = $products->latest()->take(6)->get();
 @endphp
 @if(count($products))
 <section class="container-liquid">
@@ -12,15 +13,17 @@ $products = $products->latest()->take(6)->get();
             @foreach($products as $product)
             <div class="card">
                 <div class="card-img">
-                    <img src="{{$product->img}}" alt="">
+                    {{$product->getFirstMedia('images') }}
                 </div>
-                <h5>{{strip_tags($product->name)}}</h5>
-                <div class="description">{{$product->type->name}}, {{$product->collection->name}}</div>
-                @if(!empty($product->icons))
+                <h5>{{strip_tags($product->translate($locale)->name)}}</h5>
+                <div class="description">{{$product->type->translate($locale)->name}}, {{$product->collection->translate($locale)->name}}</div>
+                @if(!empty($product->markets))
                 <div class="icons">
-                    @foreach(json_decode($product->icons) as $icon)
+                    @foreach($product->markets as $icon)
+{{--                    @foreach(json_decode($product->icons) as $icon)--}}
                     <div class="icons_item">
-                        <img src="{{ Voyager::image( $icon ) }}" alt="">
+                        {{$icon->getFirstMedia('icon') }}
+{{--                        <img src="{{ Voyager::image( $icon ) }}" alt="">--}}
                     </div>
                     @endforeach
                 </div>

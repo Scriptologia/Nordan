@@ -2,44 +2,7 @@
 @section('content')
     <main>
         @include('partials.main-slider')
-        <section class="container-liquid">
-            <div class="container-inner p-60">
-                <div class="icon-slider">
-                    <div class="icon-slider_slider">
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                        <div class="icon-slider_slider_item">
-                            <img src="{{asset('images/img/image2.png')}}" alt="">
-                            <a href="" class="link">Перейти по ссылке<i class="icon-li-arrow2"></i></a>
-                        </div>
-                    </div>
-                    <div class="icon-slider_dots">
-                        <div class="icon-slider_arrow prev"><i class="icon-li-arrow"></i></div>
-                        <div class="icon-slider_arrow next"><i class="icon-li-arrow"></i></div>
-                    </div>
-                    <!--<div class="icon-slider_arrow">-->
-                    <!--</div>-->
-                </div>
-            </div>
-        </section>
+        @include('partials.markets-slider')
         <section class="container-liquid">
             <div class="container-inner pb-60">
                 <div class="news">
@@ -110,7 +73,7 @@
                 </div>
             </div>
         </section>
-        @include('partials.recomendation', ['buttonLink' => route('api-get-products'), 'title' => __('text.new_products_of_nortan')])
+        @include('partials.recomendation', ['buttonLink' => route('catalog'), 'title' => __('text.new_products_of_nortan')])
         <section class="container-liquid">
             <div class="container-inner p-60">
                 <div class="flex">

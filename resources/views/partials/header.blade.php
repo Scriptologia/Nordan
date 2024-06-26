@@ -3,7 +3,7 @@
         <div class="container-inner bg-main">
             <div class="header">
                 <div class="header-icon">
-                    <a href="/"><img src="{{asset('images/img/logo.png')}}" alt=""><img src="{{asset('images/img/logo-text.png')}}" alt=""></a>
+                    <a href="{{route('index')}}"><img src="{{asset('images/img/logo.png')}}" alt=""><img src="{{asset('images/img/logo-text.png')}}" alt=""></a>
                 </div>
                 {!! menu('header', 'partials.menu') !!}
                 {{--<div class="menu">--}}
@@ -28,13 +28,13 @@
                         </div>
                     </div>
                     <a href="#" class="heart"><i class="icon-li-heart"></i></a>
-                    @if(count($locale))
+                    @if(count($locales))
                     <div class="lang">
                         <div class="lang-name">{{app()->getLocale()}}</div>
                         <i class="icon-li-arrow"></i>
                         <div class="lang-lists">
                             <div class="lang-list">
-                                @foreach($locale as $l)
+                                @foreach($locales as $l)
                                 <a class="lang-list_item" href="{{'/setlocale/'.$l}}">{{$l}}</a>
                                 @endforeach
                             </div>
@@ -63,13 +63,13 @@
                         {{--<a href="#" class="menu-mobile-list_item">Аксессуары</a>--}}
                         {{--<a href="#" class="menu-mobile-list_item">Поддержка</a>--}}
                     {{--</div>--}}
-                    @if(count($locale))
+                    @if(count($locales))
                        <div class="lang">
                         <div class="lang-name">{{app()->getLocale()}}</div>
                         <i class="icon-li-arrow"></i>
                         <div class="lang-lists">
                             <div class="lang-list">
-                                @foreach($locale as $l)
+                                @foreach($locales as $l)
                                     <a class="lang-list_item" href="{{'/setlocale/'.$l}}">{{$l}}</a>
                                 @endforeach
                             </div>
