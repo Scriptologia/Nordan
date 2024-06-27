@@ -14,13 +14,11 @@
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
 </head>
 <body>
-<div id="app">
     @include('partials.header')
 
     @yield('content')
 
     @include('partials.footer')
-</div>
 @stack('script')
 <script src="{{asset('js/jquery-1.3.5.min.js')}}" ></script>
 <script src="{{asset('js/wow.js')}}" ></script>

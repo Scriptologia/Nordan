@@ -147,13 +147,13 @@
                 </div>
             </div>
         </section>
-        <section class="container-liquid">
-            <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.is_quality')</h2>
-                <div class="presentation">
-                </div>
-            </div>
-        </section>
+        {{--<section class="container-liquid">--}}
+            {{--<div class="container-inner p-60">--}}
+                {{--<h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.is_quality')</h2>--}}
+                {{--<div class="presentation">--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</section>--}}
         <section class="container-liquid">
             <div class="container-inner p-60">
                 <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.nature.title')</h2>
