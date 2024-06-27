@@ -9,9 +9,11 @@ $locale = app()->getLocale();
                 <div class="product-card">
                     <div class="product-card-left">
                         <div class="product-slider-main">
+{{--                            @forelse(json_decode($product->images) as $img)--}}
                             @forelse($product->getMedia('images') as $img)
-                            {{ $img}}
-                            {{--<img src="{{Voyager::image( $img)}}" alt="">--}}
+{{--                                @dd($img)--}}
+{{--                            <img src="{{Voyager::image( $img)}}" alt="">--}}
+                            <img src="{{$product->getThumbnail($img->original_url, 'fit-500')}}" alt="">
                             @empty
                             @endforelse
                         </div>
