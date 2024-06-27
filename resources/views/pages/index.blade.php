@@ -106,42 +106,42 @@
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30">@lang('text.cycle.title')</h2>
+                <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.cycle.title')</h2>
                 <div class="flex">
-                    <div class="cycle">
-                        <div class="cycle-img">
+                    <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0.75s">
+                        <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.75s">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text">@lang('text.cycle.text_1')</div>
-                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.75s">
-                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.75s">@lang('text.cycle.etap_1')</h2>
+                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.75s">@lang('text.cycle.text_1')</div>
+                        <div class="cycle-div">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="1.75s">@lang('text.cycle.etap_1')</h2>
                         </div>
                     </div>
-                    <div class="cycle">
-                        <div class="cycle-img wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay=".5s">
+                        <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">@lang('text.cycle.text_2')</div>
-                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">@lang('text.cycle.etap_2')</h2>
+                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">@lang('text.cycle.text_2')</div>
+                        <div class="cycle-div">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="1.5s">@lang('text.cycle.etap_2')</h2>
                         </div>
                     </div>
-                    <div class="cycle">
-                        <div class="cycle-img">
+                    <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay=".25s">
+                        <div class="cycle-img wowanimate__fadeIn" data-wow-duration="2s" data-wow-delay="1.25s">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text">@lang('text.cycle.text_3')</div>
-                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".25s">
-                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".25s">@lang('text.cycle.etap_3')</h2>
+                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".25s">@lang('text.cycle.text_3')</div>
+                        <div class="cycle-div">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="1.25s">@lang('text.cycle.etap_3')</h2>
                         </div>
                     </div>
-                    <div class="cycle">
-                        <div class="cycle-img">
+                    <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0">
+                        <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text">@lang('text.cycle.text_4')</div>
-                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0">
-                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0">@lang('text.cycle.etap_4')</h2>
+                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.cycle.text_4')</div>
+                        <div class="cycle-div">
+                            <h2 class="like-h1 wowanimate__fadeIn" data-wow-duration="2s" data-wow-delay="1s">@lang('text.cycle.etap_4')</h2>
                         </div>
                     </div>
                 </div>
@@ -149,40 +149,40 @@
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30">@lang('text.is_quality')</h2>
+                <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.is_quality')</h2>
                 <div class="presentation">
                 </div>
             </div>
         </section>
         <section class="container-liquid">
             <div class="container-inner p-60">
-                <h2 class="like-h1 mb-30">@lang('text.nature.title')</h2>
+                <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.nature.title')</h2>
                 <div class="nature">
                     <div class="nature-left">
-                        <img src="{{asset('images/img/squerell.jpg')}}" alt="">
+                        <img class="wow animate__fadeInLeft" data-wow-duration="2s" data-wow-delay="0" src="{{asset('images/img/squerell.jpg')}}" alt="">
                     </div>
                     <div class="nature-right">
-                        <div class="nature-right_item"><i class="icon-li-nature1"></i>
+                        <div class="nature-right_item wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0"><i class="icon-li-nature1"></i>
                             <div class="nature-right_item_text">
                                 <h4>@lang('text.nature.text_1')</h4>
                             </div>
                         </div>
-                        <div class="nature-right_item"><i class="icon-li-nature2"></i>
+                        <div class="nature-right_item wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0"><i class="icon-li-nature2"></i>
                             <div class="nature-right_item_text">
                                 <h4>@lang('text.nature.text_2')</h4>
                             </div>
                         </div>
-                        <div class="nature-right_item"><i class="icon-li-nature3"></i>
+                        <div class="nature-right_item wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0"><i class="icon-li-nature3"></i>
                             <div class="nature-right_item_text">
                                 <h4>@lang('text.nature.text_3')</h4>
                             </div>
                         </div>
-                        <div class="nature-right_item"><i class="icon-li-nature4"></i>
+                        <div class="nature-right_item wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0"><i class="icon-li-nature4"></i>
                             <div class="nature-right_item_text">
                                 <h4>@lang('text.nature.text_4')</h4>
                             </div>
                         </div>
-                        <div class="nature-right_item"><i class="icon-li-nature5"></i>
+                        <div class="nature-right_item wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0"><i class="icon-li-nature5"></i>
                             <div class="nature-right_item_text">
                                 <h4>@lang('text.nature.text_5')</h4>
                             </div>

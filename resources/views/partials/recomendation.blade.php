@@ -8,10 +8,10 @@ $locale = app()->getLocale();
 @if(count($products))
 <section class="container-liquid">
     <div class="container-inner p-60">
-        <h2 class="like-h1 mb-30">{!! $title !!}</h2>
+        <h2 class="like-h1 mb-30 wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">{!! $title !!}</h2>
         <div class="flex">
             @foreach($products as $product)
-            <div class="card">
+            <div class="card wow animate__slideInUp animate__fadeIn" data-wow-duration="2s" data-wow-delay="{{$loop->index / 4}}s">
                 <div class="card-img">
                     {{$product->getFirstMedia('images') }}
                 </div>

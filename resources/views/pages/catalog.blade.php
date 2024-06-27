@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <main>
+        @dd(url()->full())
         <section class="container-liquid">
             <div class="container-inner p-60 mt-60">
                 <h2 class="like-h1 mb-30">@lang('text.catalog-of-products') <span>nordan</span></h2>
