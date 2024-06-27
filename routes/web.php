@@ -19,8 +19,8 @@ use App\Http\Middleware\SetLocale;
 //});
 Route::get('/setlocale/{locale}', function ($locale, \Illuminate\Http\Request $request) {
     $url = SetLocale::getUrl($locale);
-//    dd($url, app()->getLocale());
     return redirect()->to($url );
+
 })->name('setlocale');
 
 Route::group(['prefix' => SetLocale::getLocale()], function () {

@@ -28,6 +28,10 @@
 <script src="{{asset('js/menu.js')}}"></script>
 <script>
     let w = new WOW().init();
+
+    let route = {
+        catalog: @json(route('catalog'))
+    };
 </script>
 </body>
 </html>

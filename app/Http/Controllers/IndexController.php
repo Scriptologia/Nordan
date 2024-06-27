@@ -74,7 +74,6 @@ class IndexController extends Controller
             $paginatorHTML = $products->appends($queryArray)->links('partials.paginator')->render();
 
             $request = $request->fullUrlWithQuery($queryArray);
-
             return response()->json(array('success' => true, 'productHTML' => $productHTML, 'paginatorHTML' => $paginatorHTML, 'url' => $request, 'queryArray' => $queryArray));
         }
         else {

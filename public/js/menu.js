@@ -201,7 +201,7 @@ function setFilters(queryArray = []){
     $('#form-catalog').on('change', function(e) {
         e.preventDefault();
         let data = $('#form-catalog').serialize()
-        $.post( '/catalog', data, function( response ){
+        $.post( route.catalog, data, function( response ){
                 if(response.success){
                     console.log(response)
                     $('.catalog-items .flex').html(response.productHTML)

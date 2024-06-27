@@ -23,23 +23,32 @@ class SetLocale
     }
 
     public static function getUrl ($locale) {
-        if (!empty($locale) && in_array($locale, self::$languages)) app()->setLocale($locale);
         $url = url()->previous();
-        $url = parse_url($url)['path'];
-        $loc = explode('/',$url);
+
+        if (!empty($locale) && in_array($locale, self::$languages)) { app()->setLocale($locale); }
+        else {  return $url; }
+
+//        dd(request()->create($url)->path(),parse_url($url), url()->previous(), parse_url($url)['path']);
+        $array = parse_url($url);
+        $path = $array['path'];
+        $loc = explode('/',$path);
         if (!empty($loc[1]) && in_array($loc[1], self::$languages) ) {
             $loc[1] = $locale;
             if($locale === self::$mainLanguage) {
                 unset($loc[1]);
             }
-            $url = implode("/", $loc);
+            $path = implode("/", $loc);
         }
         else {
-            if($locale === self::$mainLanguage) {
-                $locale = '';
+            if($locale !== self::$mainLanguage) {
+                $path = '/'.$locale.$path;
             }
-            $url = $locale.implode("/", $loc);
         }
+        $query = !empty($array['query'])? '?'.$array['query'] : '';
+        $fragment = !empty($array['fragment'])?  '#' . $array['fragment']: '';
+        $path = !empty($path)?  $path: '';
+
+        $url = $array['scheme'].'://'.$array['host'].$path.$query.$fragment;
         return $url;
     }
     /**
