@@ -12,8 +12,8 @@ $locale = app()->getLocale();
 {{--                            @forelse(json_decode($product->images) as $img)--}}
                             @forelse($product->getMedia('images') as $img)
 {{--                                @dd($img)--}}
-{{--                            <img src="{{Voyager::image( $img)}}" alt="">--}}
-                            <img src="{{$product->getThumbnail($img->original_url, 'fit-500')}}" alt="">
+                            <img src="{{Voyager::image( $img)}}" alt="">
+{{--                            <img src="{{$product->getThumbnail($img->original_url, 'fit-500')}}" alt="">--}}
                             @empty
                             @endforelse
                         </div>
