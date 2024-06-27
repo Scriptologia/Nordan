@@ -113,17 +113,17 @@
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text">@lang('text.cycle.text_1')</div>
-                        <div class="cycle-div">
-                            <h2 class="like-h1">@lang('text.cycle.etap_1')</h2>
+                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.75s">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0.75s">@lang('text.cycle.etap_1')</h2>
                         </div>
                     </div>
                     <div class="cycle">
-                        <div class="cycle-img">
+                        <div class="cycle-img wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
-                        <div class="cycle-text">@lang('text.cycle.text_2')</div>
-                        <div class="cycle-div">
-                            <h2 class="like-h1">@lang('text.cycle.etap_2')</h2>
+                        <div class="cycle-text wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">@lang('text.cycle.text_2')</div>
+                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".5s">@lang('text.cycle.etap_2')</h2>
                         </div>
                     </div>
                     <div class="cycle">
@@ -131,8 +131,8 @@
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text">@lang('text.cycle.text_3')</div>
-                        <div class="cycle-div">
-                            <h2 class="like-h1">@lang('text.cycle.etap_3')</h2>
+                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay=".25s">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay=".25s">@lang('text.cycle.etap_3')</h2>
                         </div>
                     </div>
                     <div class="cycle">
@@ -140,8 +140,8 @@
                             <img src="{{asset('images/img/cycle.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text">@lang('text.cycle.text_4')</div>
-                        <div class="cycle-div">
-                            <h2 class="like-h1">@lang('text.cycle.etap_4')</h2>
+                        <div class="cycle-div wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0">
+                            <h2 class="like-h1 wow animate__fadeIn" data-wow-duration="1s" data-wow-delay="0">@lang('text.cycle.etap_4')</h2>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 .cycle {
   width: 445rem;
+  overflow:hidden;
   @include md(){
     width: 49%;
     &:nth-child(1){

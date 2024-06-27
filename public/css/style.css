@@ -2443,6 +2443,7 @@ footer {
   }
 }
 .icon-slider_slider_item > img {
+  object-fit: contain;
   width: auto;
   height: 30%;
 }
@@ -2758,6 +2759,7 @@ footer {
 }
 .cycle {
   width: 445rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .cycle {

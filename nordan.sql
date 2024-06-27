@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 26 2024 г., 13:39
+-- Время создания: Июн 27 2024 г., 02:06
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -124,10 +124,10 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (9, 1, 'user_belongsto_role_relationship', 'relationship', 'Role', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsTo\",\"column\":\"role_id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"roles\",\"pivot\":0}', 10),
 (10, 1, 'user_belongstomany_role_relationship', 'relationship', 'Roles', 0, 1, 1, 1, 1, 0, '{\"model\":\"TCG\\\\Voyager\\\\Models\\\\Role\",\"table\":\"roles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"display_name\",\"pivot_table\":\"user_roles\",\"pivot\":\"1\",\"taggable\":\"0\"}', 11),
 (11, 1, 'settings', 'hidden', 'Settings', 0, 0, 0, 0, 0, 0, NULL, 12),
-(12, 2, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
-(13, 2, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
-(14, 2, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
-(15, 2, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
+(12, 2, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
+(13, 2, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 2),
+(14, 2, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '{}', 3),
+(15, 2, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4),
 (16, 3, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
 (17, 3, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 2),
 (18, 3, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, NULL, 3),
@@ -166,8 +166,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (51, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 1, '{}', 4),
 (52, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (53, 14, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required|string|max:100\",\"messages\":{\"required\":\"This :attribute field is a must.\",\"max\":\"This :attribute field maximum :max.\"}}}', 2),
-(54, 14, 'img', 'image', 'Img', 1, 1, 1, 1, 1, 1, '{\"resize\":{\"width\":\"360\",\"height\":null},\"quality\":\"70%\",\"upsize\":true,\"mimetypes\":[\"image\\/jpeg\"]}', 3),
-(55, 14, 'icon', 'media_picker', 'Icon', 1, 1, 1, 1, 1, 1, '{\"max\":1,\"min\":0,\"expanded\":true,\"show_as_images\":true,\"show_folders\":true,\"show_toolbar\":true,\"allow_upload\":true,\"allow_move\":true,\"allow_delete\":true,\"allow_create_folder\":true,\"allow_rename\":true,\"allow_crop\":true,\"allowed\":[],\"hide_thumbnails\":false,\"quality\":90}', 4),
+(54, 14, 'img', 'adv_image', 'Img', 0, 1, 1, 1, 1, 1, '{\"max\":1,\"min\":0,\"expanded\":true,\"show_as_images\":true,\"show_folders\":true,\"show_toolbar\":true,\"allow_upload\":true,\"allow_move\":true,\"allow_delete\":true,\"allow_create_folder\":true,\"allow_rename\":true,\"allow_crop\":true,\"allowed\":[],\"hide_thumbnails\":false,\"quality\":90,\"thumbnails\":[{\"type\":\"crop\",\"name\":\"crop-500\",\"width\":300,\"height\":150,\"position\":\"center\"}]}', 3),
+(55, 14, 'icon', 'adv_image', 'Icon', 0, 1, 1, 1, 1, 1, '{\"max\":1,\"min\":0,\"expanded\":true,\"show_as_images\":true,\"show_folders\":true,\"show_toolbar\":true,\"allow_upload\":true,\"allow_move\":true,\"allow_delete\":true,\"allow_create_folder\":true,\"allow_rename\":true,\"allow_crop\":true,\"allowed\":[],\"hide_thumbnails\":false,\"quality\":90,\"thumbnails\":[{\"type\":\"crop\",\"name\":\"crop-500\",\"width\":50,\"height\":50,\"position\":\"center\"}]}', 4),
 (56, 14, 'link', 'text', 'Link', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required|string|max:100\",\"messages\":{\"required\":\"This :attribute field is a must.\",\"max\":\"This :attribute field maximum :max.\"}}}', 5),
 (57, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 1, '{}', 6),
 (58, 14, 'updated_at', 'timestamp', 'Updated At', 0, 1, 1, 0, 0, 1, '{}', 7),
@@ -176,7 +176,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (61, 15, 'type_id', 'text', 'Type Id', 1, 0, 0, 1, 1, 0, '{}', 7),
 (62, 15, 'collection_id', 'text', 'Collection Id', 1, 0, 0, 0, 0, 0, '{}', 8),
 (63, 15, 'recomendation', 'checkbox', 'Recomendation', 1, 1, 1, 1, 1, 1, '{\"on\":1,\"off\":0,\"checked\":false,\"browse_inline_editor\":true}', 9),
-(64, 15, 'images', 'media_picker', 'Images', 0, 1, 1, 1, 1, 1, '{\"max\":3,\"min\":0,\"expanded\":true,\"show_as_images\":true,\"show_folders\":true,\"show_toolbar\":true,\"allow_upload\":true,\"allow_move\":true,\"allow_delete\":true,\"allow_create_folder\":true,\"allow_rename\":true,\"allow_crop\":true,\"allowed\":[],\"hide_thumbnails\":false,\"quality\":90,\"thumbnails\":[{\"type\":\"fit\",\"name\":\"fit-500\",\"width\":500,\"height\":500,\"position\":\"center\"}]}', 5),
+(64, 15, 'images', 'adv_media_files', 'Images', 0, 1, 1, 1, 1, 1, '{\"max\":2,\"min\":0,\"expanded\":true,\"show_as_images\":true,\"show_folders\":true,\"show_toolbar\":true,\"allow_upload\":true,\"allow_move\":true,\"allow_delete\":true,\"allow_create_folder\":true,\"allow_rename\":true,\"allow_crop\":true,\"allowed\":[],\"hide_thumbnails\":false,\"quality\":90,\"thumbnails\":[{\"type\":\"fit\",\"name\":\"fit-500\",\"width\":500,\"height\":500,\"position\":\"center\"}],\"watermark\":{\"source\":\"...\",\"position\":\"top-left\",\"x\":0,\"y\":0}}', 5),
 (65, 15, 'deleted_at', 'timestamp', 'Deleted At', 0, 1, 1, 1, 1, 1, '{}', 17),
 (66, 15, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 18),
 (67, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 19),
@@ -189,7 +189,9 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (74, 15, 'product_belongstomany_color_relationship', 'relationship', 'colors', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Color\",\"table\":\"colors\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"color_product\",\"pivot\":\"1\",\"taggable\":\"0\"}', 16),
 (75, 15, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"6\"},\"validation\":{\"rule\":\"required|string|max:100\",\"messages\":{\"required\":\"This :attribute field is a must.\",\"max\":\"This :attribute field maximum :max.\"}}}', 2),
 (76, 15, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"6\"},\"slugify\":{\"origin\":\"name\",\"forceUpdate\":true},\"validation\":{\"rule\":\"required|string|max:100\",\"messages\":{\"required\":\"This :attribute field is a must.\",\"max\":\"This :attribute field maximum :max.\"}}}', 3),
-(77, 15, 'parameters', 'adv_json', 'Parameters', 0, 1, 1, 1, 1, 1, '{\"json_fields\":{\"name\":\"Name\",\"value\":\"Value\"}}', 6);
+(77, 15, 'parameters', 'adv_json', 'Parameters', 0, 1, 1, 1, 1, 1, '{\"json_fields\":{\"name\":\"Name\",\"value\":\"Value\"}}', 6),
+(78, 2, 'menu_belongsto_type_relationship', 'relationship', 'types', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Type\",\"table\":\"types\",\"type\":\"belongsTo\",\"column\":\"type_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"collections\",\"pivot\":\"0\",\"taggable\":\"0\"}', 5),
+(79, 2, 'type_id', 'text', 'Type Id', 0, 0, 0, 1, 1, 0, '{}', 5);
 
 -- --------------------------------------------------------
 
@@ -221,7 +223,7 @@ CREATE TABLE `data_types` (
 
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2024-06-22 16:34:49', '2024-06-22 16:34:49'),
-(2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2024-06-22 16:34:49', '2024-06-22 16:34:49'),
+(2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null,\"extra_details\":{}}', '2024-06-22 16:34:49', '2024-06-26 09:23:32'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2024-06-22 16:34:49', '2024-06-22 16:34:49'),
 (4, 'sizes', 'sizes', 'Size', 'Sizes', NULL, 'App\\Models\\Size', NULL, NULL, 'sizes of boots', 1, 0, '{\"order_column\":\"size\",\"order_display_column\":\"size\",\"order_direction\":\"asc\",\"default_search_key\":\"size\",\"extra_details\":{},\"scope\":null}', '2024-06-22 18:47:56', '2024-06-22 18:55:24'),
 (5, 'colors', 'colors', 'Color', 'Colors', NULL, 'App\\Models\\Color', NULL, NULL, 'colors of boots', 1, 0, '{\"order_column\":\"name\",\"order_display_column\":\"name\",\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{}}', '2024-06-22 19:01:15', '2024-06-22 19:01:15'),
@@ -229,8 +231,8 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (11, 'collections', 'collections', 'Collection', 'Collections', NULL, 'App\\Models\\Collection', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"name\",\"order_display_column\":\"name\",\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{}}', '2024-06-22 19:11:14', '2024-06-22 19:11:14'),
 (12, 'sliders', 'sliders', 'Slider', 'Sliders', NULL, 'App\\Models\\Slider', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{},\"scope\":null}', '2024-06-22 19:18:29', '2024-06-23 05:54:22'),
 (13, 'parameters', 'parameters', 'Parameter', 'Parameters', NULL, 'App\\Models\\Parameter', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"name\",\"order_display_column\":\"name\",\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{}}', '2024-06-22 19:31:01', '2024-06-22 19:31:01'),
-(14, 'markets', 'markets', 'Market', 'Markets', NULL, 'App\\Models\\Market', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{},\"scope\":null}', '2024-06-22 19:36:54', '2024-06-24 12:03:21'),
-(15, 'products', 'products', 'Product', 'Products', NULL, 'App\\Models\\Product', NULL, NULL, 'products', 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"id\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null,\"extra_details\":{}}', '2024-06-23 06:20:00', '2024-06-25 16:08:43');
+(14, 'markets', 'markets', 'Market', 'Markets', NULL, 'App\\Models\\Market', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"extra_details\":{},\"scope\":null}', '2024-06-22 19:36:54', '2024-06-26 18:33:39'),
+(15, 'products', 'products', 'Product', 'Products', NULL, 'App\\Models\\Product', NULL, NULL, 'products', 1, 0, '{\"order_column\":\"id\",\"order_display_column\":\"id\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null,\"extra_details\":{}}', '2024-06-23 06:20:00', '2024-06-26 10:25:32');
 
 -- --------------------------------------------------------
 
@@ -257,8 +259,8 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `markets` (
   `id` int UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `icon` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -269,7 +271,10 @@ CREATE TABLE `markets` (
 --
 
 INSERT INTO `markets` (`id`, `name`, `img`, `icon`, `link`, `created_at`, `updated_at`) VALUES
-(1, 'amazon', 'markets\\June2024\\TJ9MJJAKgl14FnqcAG8h.png', 'marketsJune2024yV8snUM6ynZPgmQKVmaM.png', 'http://nordan/card#', '2024-06-22 19:39:32', '2024-06-24 11:55:58');
+(1, 'amazon', NULL, NULL, 'http://nordan/card#', '2024-06-22 19:39:32', '2024-06-26 10:47:56'),
+(2, 'amazon2', NULL, NULL, 'http://nordan/card#', '2024-06-26 10:54:23', '2024-06-26 10:54:59'),
+(3, 'amazon3', NULL, NULL, 'http://nordan/card#', '2024-06-26 10:54:40', '2024-06-26 10:55:19'),
+(4, 'amazon (clone)', NULL, NULL, 'http://nordan/card#', '2024-06-26 18:09:17', '2024-06-26 18:25:07');
 
 -- --------------------------------------------------------
 
@@ -288,7 +293,9 @@ CREATE TABLE `market_product` (
 
 INSERT INTO `market_product` (`market_id`, `product_id`) VALUES
 (1, 1),
-(1, 2);
+(1, 2),
+(2, 1),
+(3, 1);
 
 -- --------------------------------------------------------
 
@@ -317,6 +324,23 @@ CREATE TABLE `media` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `media`
+--
+
+INSERT INTO `media` (`id`, `model_type`, `model_id`, `uuid`, `collection_name`, `name`, `file_name`, `mime_type`, `disk`, `conversions_disk`, `size`, `manipulations`, `custom_properties`, `generated_conversions`, `responsive_images`, `order_column`, `created_at`, `updated_at`) VALUES
+(3, 'App\\Models\\Product', 1, 'bb5a23c0-6d16-461c-8446-095441012332', 'images', 'Screenshot (1)', 'screenshot-1.jpg', 'image/jpeg', 'public', 'public', 68773, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 2, '2024-06-26 10:08:54', '2024-06-26 10:17:15'),
+(4, 'App\\Models\\Product', 1, 'ce5b074b-e257-443c-b9ce-a97f03ddc3db', 'images', 'nija', 'nija.jpeg', 'image/jpeg', 'public', 'public', 176670, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 1, '2024-06-26 10:17:10', '2024-06-26 10:17:15'),
+(5, 'App\\Models\\Product', 1, '10212d92-c2f6-4573-a1e0-67b9b6c97115', 'images', '43933400', '43933400.png', 'image/png', 'public', 'public', 52034, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 3, '2024-06-26 10:25:52', '2024-06-26 10:25:52'),
+(9, 'App\\Models\\Market', 1, '6640e8b7-8652-4e15-8d05-97992fe04576', 'icon', '43933400', '43933400.png', 'image/png', 'public', 'public', 52034, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 4, '2024-06-26 10:48:25', '2024-06-26 10:48:25'),
+(10, 'App\\Models\\Market', 1, 'c4278020-55c3-49b8-84ae-252031dfc7f2', 'img', '43933400', '43933400.png', 'image/png', 'public', 'public', 52034, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 5, '2024-06-26 10:50:12', '2024-06-26 10:50:12'),
+(11, 'App\\Models\\Market', 2, 'f558700f-18c5-436d-bb52-a96bb140254a', 'img', '187153v16b9ab52', '187153v16b9ab52.jpg', 'image/jpeg', 'public', 'public', 9073, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 1, '2024-06-26 10:54:59', '2024-06-26 10:54:59'),
+(12, 'App\\Models\\Market', 2, '960892e0-4365-477f-b24d-832f7491bc38', 'icon', '187153v16b9ab52', '187153v16b9ab52.jpg', 'image/jpeg', 'public', 'public', 9073, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 2, '2024-06-26 10:54:59', '2024-06-26 10:54:59'),
+(13, 'App\\Models\\Market', 3, '8aa2b1c0-e589-4517-9d16-e68b0f4a0cc4', 'img', 'sphere', 'sphere.jpg', 'image/jpeg', 'public', 'public', 16397, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 1, '2024-06-26 10:55:19', '2024-06-26 10:55:19'),
+(14, 'App\\Models\\Market', 3, 'ea523deb-5be4-4742-99b3-ca5d8c288c9e', 'icon', 'sphere', 'sphere.jpg', 'image/jpeg', 'public', 'public', 16397, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 2, '2024-06-26 10:55:19', '2024-06-26 10:55:19'),
+(15, 'App\\Models\\Market', 4, '72467943-680a-481e-90fb-4036bbcf5db3', 'img', 'sphere', 'sphere.jpg', 'image/jpeg', 'public', 'public', 16397, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 1, '2024-06-26 18:09:34', '2024-06-26 18:09:34'),
+(16, 'App\\Models\\Market', 4, '7aece2da-b344-45fb-aebf-3ea0a86156b3', 'icon', 'sphere', 'sphere.jpg', 'image/jpeg', 'public', 'public', 16397, '[]', '{\"alt\": null, \"title\": null}', '[]', '[]', 2, '2024-06-26 18:09:34', '2024-06-26 18:09:34');
+
 -- --------------------------------------------------------
 
 --
@@ -327,17 +351,18 @@ CREATE TABLE `menus` (
   `id` int UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `type_id` int UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `menus`
 --
 
-INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2024-06-22 16:34:50', '2024-06-22 16:34:50'),
-(2, 'header', '2024-06-22 18:11:51', '2024-06-22 18:16:17'),
-(4, 'footer', '2024-06-23 04:14:57', '2024-06-25 18:04:09');
+INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`, `type_id`) VALUES
+(1, 'admin', '2024-06-22 16:34:50', '2024-06-22 16:34:50', NULL),
+(2, 'header', '2024-06-22 18:11:51', '2024-06-22 18:16:17', NULL),
+(4, 'footer', '2024-06-23 04:14:57', '2024-06-25 18:04:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -377,9 +402,9 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `status`, `title`, `url`, `target`, `
 (8, 1, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2024-06-22 16:34:50', '2024-06-23 04:17:22', 'voyager.compass.index', NULL),
 (9, 1, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2024-06-22 16:34:50', '2024-06-23 04:17:22', 'voyager.bread.index', NULL),
 (10, 1, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 7, '2024-06-22 16:34:50', '2024-06-23 04:17:48', 'voyager.settings.index', NULL),
-(11, 2, 1, 'мужская', '/catalog?collection=1', '_self', NULL, '#000000', NULL, 15, '2024-06-22 18:17:13', '2024-06-25 18:29:51', NULL, ''),
-(12, 2, 1, 'женская', '', '_self', NULL, '#000000', NULL, 16, '2024-06-22 18:17:31', '2024-06-22 18:17:31', NULL, ''),
-(13, 2, 1, 'детская', '', '_self', NULL, '#000000', NULL, 17, '2024-06-22 18:17:42', '2024-06-22 18:17:42', NULL, ''),
+(11, 2, 1, 'мужская', '', '_self', NULL, '#000000', NULL, 15, '2024-06-22 18:17:13', '2024-06-26 17:02:01', 'catalog', '{\"type\":\"1\"}'),
+(12, 2, 1, 'женская', '/catalog?type=2', '_self', NULL, '#000000', NULL, 16, '2024-06-22 18:17:31', '2024-06-26 09:02:01', NULL, ''),
+(13, 2, 1, 'детская', '/catalog?type=3', '_self', NULL, '#000000', NULL, 17, '2024-06-22 18:17:42', '2024-06-26 08:59:18', NULL, ''),
 (14, 2, 1, 'СПОРТИВНАЯ', '', '_self', NULL, '#000000', NULL, 18, '2024-06-22 18:18:02', '2024-06-22 18:18:02', NULL, ''),
 (15, 2, 1, 'АКСЕССУАРЫ', '', '_self', NULL, '#000000', NULL, 19, '2024-06-22 18:18:16', '2024-06-22 18:18:16', NULL, ''),
 (16, 2, 1, 'ПОДДЕРЖКА', '', '_self', NULL, '#000000', NULL, 20, '2024-06-22 18:18:29', '2024-06-22 18:18:29', NULL, ''),
@@ -399,9 +424,9 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `status`, `title`, `url`, `target`, `
 (32, 4, 1, 'Кросовки', '', '_self', NULL, '#000000', 28, 4, '2024-06-25 17:56:30', '2024-06-25 17:57:03', NULL, ''),
 (33, 4, 1, 'Туфли', '', '_self', NULL, '#000000', 28, 5, '2024-06-25 17:56:41', '2024-06-25 17:57:04', NULL, ''),
 (34, 4, 1, 'Ботинки', '', '_self', NULL, '#000000', 28, 6, '2024-06-25 17:56:52', '2024-06-25 17:57:04', NULL, ''),
-(35, 4, 1, 'женская', '', '_self', NULL, '#000000', NULL, 21, '2024-06-25 17:57:18', '2024-06-25 17:57:18', NULL, ''),
-(36, 4, 1, 'детская', '', '_self', NULL, '#000000', NULL, 22, '2024-06-25 17:57:38', '2024-06-25 17:57:38', NULL, ''),
-(37, 4, 1, 'домашняя', '', '_self', NULL, '#000000', NULL, 23, '2024-06-25 17:57:48', '2024-06-25 17:57:48', NULL, '');
+(35, 4, 1, 'женская', '', '_self', NULL, '#000000', NULL, 2, '2024-06-25 17:57:18', '2024-06-26 16:59:06', NULL, ''),
+(36, 4, 1, 'детская', '', '_self', NULL, '#000000', NULL, 3, '2024-06-25 17:57:38', '2024-06-26 16:59:06', NULL, ''),
+(37, 4, 1, 'домашняя', '', '_self', NULL, '#000000', NULL, 4, '2024-06-25 17:57:48', '2024-06-26 16:59:06', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -764,7 +789,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `images`, `slug`, `type_id`, `collection_id`, `description`, `recomendation`, `waterproof`, `deleted_at`, `created_at`, `updated_at`, `parameters`) VALUES
-(1, 'туфли <span>nordan</span>', '[]', 'tufli-nordan', 1, 1, 'Легендарные мужские туфли модели Саламандер - это прекрасный выбор для повседневной обуви, которую можно будет надеть на любое торжественное или праздничное мероприятие. Комфортная колодка и универсальный дизайн этих классических туфель позволяет использовать их для танцев, но они также достаточно удобны для повседневной носки на работе в офисе или в школе в качестве сменной пары.', 1, 1, '2024-06-23 13:37:00', '2024-06-23 09:17:00', '2024-06-23 14:30:05', '{\"rows\": [{\"name\": \"Высота каблука, см\", \"value\": \"3.5\"}, {\"name\": \"Натуральная кожа\", \"value\": \"Натуральная кожа\"}], \"fields\": {\"name\": \"Name\", \"value\": \"Value\"}}'),
+(1, 'туфли <span>nordan</span>', NULL, 'tufli-nordan', 1, 1, 'Легендарные мужские туфли модели Саламандер - это прекрасный выбор для повседневной обуви, которую можно будет надеть на любое торжественное или праздничное мероприятие. Комфортная колодка и универсальный дизайн этих классических туфель позволяет использовать их для танцев, но они также достаточно удобны для повседневной носки на работе в офисе или в школе в качестве сменной пары.', 1, 1, '2024-06-23 13:37:00', '2024-06-23 09:17:00', '2024-06-26 16:34:36', '{\"rows\": [{\"name\": \"{{en}}English title {{ru}}Russian title\", \"value\": \"3.5\"}, {\"name\": \"Натуральная кожа\", \"value\": \"{{en}}English title {{ru}}Russian title\"}], \"fields\": {\"name\": \"Name\", \"value\": \"Value\"}}'),
 (6, 'туфли <span>nordan</span> (clone)', '[]', 'tufli-nordan (clone)', 1, 1, 'Легендарные мужские туфли модели Саламандер - это прекрасный выбор для повседневной обуви, которую можно будет надеть на любое торжественное или праздничное мероприятие. Комфортная колодка и универсальный дизайн этих классических туфель позволяет использовать их для танцев, но они также достаточно удобны для повседневной носки на работе в офисе или в школе в качестве сменной пары.', 1, 1, '2024-06-23 13:37:00', '2024-06-24 11:50:00', '2024-06-24 12:22:41', '{\"rows\": [{\"name\": \"Высота каблука, см\", \"value\": \"3.5\"}, {\"name\": \"Натуральная кожа\", \"value\": \"Натуральная кожа\"}], \"fields\": {\"name\": \"Name\", \"value\": \"Value\"}}'),
 (7, 'туфли <span>nordan</span> (clone) (clone)', '[]', 'tufli-nordan (clone) (clone)', 1, 1, 'Легендарные мужские туфли модели Саламандер - это прекрасный выбор для повседневной обуви, которую можно будет надеть на любое торжественное или праздничное мероприятие. Комфортная колодка и универсальный дизайн этих классических туфель позволяет использовать их для танцев, но они также достаточно удобны для повседневной носки на работе в офисе или в школе в качестве сменной пары.', 1, 1, '2024-06-23 13:37:00', '2024-06-24 13:43:24', '2024-06-24 13:43:24', '{\"rows\": [{\"name\": \"Высота каблука, см\", \"value\": \"3.5\"}, {\"name\": \"Натуральная кожа\", \"value\": \"Натуральная кожа\"}], \"fields\": {\"name\": \"Name\", \"value\": \"Value\"}}'),
 (8, 'туфли <span>nordan</span> (clone) (clone) (clone)', '[]', 'tufli-nordan (clone) (clone) (clone)', 1, 1, 'Легендарные мужские туфли модели Саламандер - это прекрасный выбор для повседневной обуви, которую можно будет надеть на любое торжественное или праздничное мероприятие. Комфортная колодка и универсальный дизайн этих классических туфель позволяет использовать их для танцев, но они также достаточно удобны для повседневной носки на работе в офисе или в школе в качестве сменной пары.', 1, 1, '2024-06-23 13:37:00', '2024-06-24 13:43:28', '2024-06-24 13:43:28', '{\"rows\": [{\"name\": \"Высота каблука, см\", \"value\": \"3.5\"}, {\"name\": \"Натуральная кожа\", \"value\": \"Натуральная кожа\"}], \"fields\": {\"name\": \"Name\", \"value\": \"Value\"}}'),
@@ -900,7 +925,7 @@ CREATE TABLE `sliders` (
 
 INSERT INTO `sliders` (`id`, `name`, `description`, `link1`, `link2`, `img`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'Весенняя коллекция обуви <span>NORDAN</span> уже в продаже!', 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum.', 'http://nordan/card#', 'http://nordan/card#', 'sliders/nija.jpeg', NULL, NULL, '2024-06-23 05:55:50'),
-(2, 'spring collection of boots <span>NORDAN</span> уже в продаже!000', 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum.', 'http://nordan/card#', 'http://nordan/card#', 'sliders/image0.png', NULL, NULL, '2024-06-25 17:32:46');
+(2, 'Весенняя коллекция обуви <span>NORDAN</span> уже в продаже!', 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum.', 'http://nordan/card#', 'http://nordan/card#', 'sliders/image0.png', NULL, NULL, '2024-06-26 17:34:31');
 
 -- --------------------------------------------------------
 
@@ -963,11 +988,24 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (39, 'colors', 'name', 3, 'en', 'yellow', '2024-06-25 17:09:04', '2024-06-25 17:09:04'),
 (40, 'types', 'name', 1, 'en', 'of men', '2024-06-25 17:30:56', '2024-06-25 17:30:56'),
 (41, 'collections', 'name', 1, 'en', 'spring-summer 2024', '2024-06-25 17:31:17', '2024-06-25 17:36:25'),
-(42, 'sliders', 'name', 2, 'en', 'Весенняя коллекция обуви <span>NORDAN</span> уже в продаже!000', '2024-06-25 17:32:46', '2024-06-25 17:32:46'),
+(42, 'sliders', 'name', 2, 'en', 'spring collection of boots <span>NORDAN</span> уже в продаже!', '2024-06-25 17:32:46', '2024-06-26 17:34:31'),
 (43, 'sliders', 'description', 2, 'en', 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum.', '2024-06-25 17:32:46', '2024-06-25 17:32:46'),
 (44, 'menu_items', 'title', 16, 'en', 'support', '2024-06-25 17:44:27', '2024-06-25 17:44:27'),
 (45, 'menu_items', 'title', 28, 'en', 'For men', '2024-06-25 17:54:56', '2024-06-25 17:54:56'),
-(46, 'menu_items', 'title', 29, 'en', 'winter', '2024-06-25 18:13:34', '2024-06-25 18:13:34');
+(46, 'menu_items', 'title', 29, 'en', 'winter', '2024-06-25 18:13:34', '2024-06-25 18:13:34'),
+(47, 'menu_items', 'title', 12, 'en', 'женская', '2024-06-26 08:59:02', '2024-06-26 08:59:02'),
+(48, 'menu_items', 'title', 13, 'en', 'детская', '2024-06-26 08:59:18', '2024-06-26 08:59:18'),
+(49, 'data_rows', 'display_name', 12, 'en', 'ID', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(50, 'data_rows', 'display_name', 13, 'en', 'Name', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(51, 'data_rows', 'display_name', 14, 'en', 'Created At', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(52, 'data_rows', 'display_name', 15, 'en', 'Updated At', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(53, 'data_rows', 'display_name', 78, 'en', 'types', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(54, 'data_types', 'display_name_singular', 2, 'en', 'Menu', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(55, 'data_types', 'display_name_plural', 2, 'en', 'Menus', '2024-06-26 09:22:35', '2024-06-26 09:22:35'),
+(56, 'data_rows', 'display_name', 79, 'en', 'Type Id', '2024-06-26 09:23:32', '2024-06-26 09:23:32'),
+(57, 'markets', 'name', 2, 'en', 'amazon (clone)', '2024-06-26 10:54:59', '2024-06-26 10:54:59'),
+(58, 'markets', 'name', 3, 'en', 'amazon (clone)', '2024-06-26 10:55:19', '2024-06-26 10:55:19'),
+(59, 'markets', 'name', 4, 'en', 'amazon (clone)', '2024-06-26 18:09:33', '2024-06-26 18:09:33');
 
 -- --------------------------------------------------------
 
@@ -1236,7 +1274,7 @@ ALTER TABLE `colors`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT для таблицы `data_types`
@@ -1254,13 +1292,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `markets`
 --
 ALTER TABLE `markets`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `media`
 --
 ALTER TABLE `media`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблицы `menus`
@@ -1338,7 +1376,7 @@ ALTER TABLE `sliders`
 -- AUTO_INCREMENT для таблицы `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT для таблицы `types`

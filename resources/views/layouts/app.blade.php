@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="{{asset('logo-32.png')}}" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
 </head>
 <body>
 <div id="app">
@@ -22,7 +23,13 @@
 </div>
 @stack('script')
 <script src="{{asset('js/jquery-1.3.5.min.js')}}" ></script>
+<script src="{{asset('js/wow.js')}}" ></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>--}}
+
 <script type="text/javascript" src="{{asset('js/slick-carousel-1.8.1-min.js')}}"></script>
 <script src="{{asset('js/menu.js')}}"></script>
+<script>
+    let w = new WOW().init();
+</script>
 </body>
 </html>
