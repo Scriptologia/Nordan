@@ -55,13 +55,13 @@
     background: $orange;
     border: 1px solid $orange;
     &:hover {
-      color: $orange;
-      background: transparent;
-      border: 1px solid $orange;
+      color: $white !important;
+      background: $orange3 !important;
+      border: 1px solid $orange3;
     }
   }
   &-orange2 {
-    color: $white;
+    color: $white !important;
     background: $orange2;
     border: 1px solid $orange2;
     &:hover {
@@ -71,7 +71,7 @@
     }
   }
   &-transparent {
-    color: $white;
+    color: $white !important;
     background: transparent;
     border: 1px solid $white;
     &:hover {

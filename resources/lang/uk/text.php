@@ -47,7 +47,7 @@ return [
         'etap_3' => '3 этап',
         'text_4' => '<b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.',
         'etap_4' => '4 этап',
-        ],
+    ],
     'nature' => [
         'title' => 'мы <span>заботимся</span> о природе',
         'text_1' => 'полностью <span>электронный</span> документооборот',
@@ -106,5 +106,13 @@ return [
         'su' => 'Воскресенье',
     ],
     'free' => 'Выходной',
+
+    'news' => [
+        'title' => 'новости бренда',
+        'link' => 'к новости',
+        'news' => 'новости',
+    ],
+    'main' => 'главная',
+    'show_all' => 'показать все',
 
 ];

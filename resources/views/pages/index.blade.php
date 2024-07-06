@@ -8,37 +8,38 @@
                 <div class="news">
                     <div class="news-left">
                         <h2>произведено</h2>
-                        <div class="counter">15 993</div>
+                        <div class="counter odometer counter-start" id="odometer1">89993</div>
                         <h2>продано</h2>
-                        <div class="counter">15 993</div>
+                        <div class="counter odometer counter-start" id="odometer2">79893</div>
                     </div>
                     <div class="news-right">
                         <h2>Новости</h2>
                         <div class="news-right_items">
+                            {{--@dd($news)--}}
                             <div class="news_item">
                                 <div class="news_item-left">
                                     <img src="{{asset('images/img/image4.png')}}" alt="">
                                 </div>
                                 <div class="news_item-right">
-                                    <h5>Lorem Ipsum dolor sit amet</h5>
-                                    <div class="date">12/12/2024</div>
-                                    <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</div>
-                                    <a class="link">к новости<i class="icon-li-arrow2"></i></a>
+                                    <h5>{{$news->getTranslatedAttribute('title')}}</h5>
+                                    <div class="date">{{$news->created_at->format('d-m-Y')}}</div>
+                                    <div class="text">{{Illuminate\Support\Str::limit(strip_tags($news->getTranslatedAttribute('description')), 150)}}</div>
+                                    <a href="{{route('news-item', $news)}}" class="link">@lang('text.news.link')<i class="icon-li-arrow2"></i></a>
                                 </div>
                             </div>
-                            <div class="news_item">
-                                <div class="news_item-left">
-                                    <img src="{{asset('images/img/image0.png')}}" alt="">
-                                </div>
-                                <div class="news_item-right">
-                                    <h5>Lorem Ipsum dolor sit amet</h5>
-                                    <div class="date">12/12/2024</div>
-                                    <div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</div>
-                                    <a class="link">к новости<i class="icon-li-arrow2"></i></a>
-                                </div>
-                            </div>
+                            {{--<div class="news_item">--}}
+                                {{--<div class="news_item-left">--}}
+                                    {{--<img src="{{asset('images/img/image0.png')}}" alt="">--}}
+                                {{--</div>--}}
+                                {{--<div class="news_item-right">--}}
+                                    {{--<h5>Lorem Ipsum dolor sit amet</h5>--}}
+                                    {{--<div class="date">12/12/2024</div>--}}
+                                    {{--<div class="text">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</div>--}}
+                                    {{--<a class="link">к новости<i class="icon-li-arrow2"></i></a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
                         </div>
-                        <div class="btn btn-orange">показать все</div>
+                        <a href="{{route('news')}}" class="btn btn-orange">@lang('text.show_all')</a>
                     </div>
                 </div>
             </div>
@@ -194,3 +195,52 @@
         @include('partials.recomendation', [ 'title' => __('text.recomendation_nordan'), 'filter' => 'recomendation'])
     </main>
 @endsection
+@push('css')
+<link href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" rel="stylesheet">
+@endpush
+@push('script')
+    <script src="{{asset('js/counter.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            // var isInViewport = function (elem) {
+            //     var distance = elem.getBoundingClientRect();
+            //     return (
+            //         distance.top >= 0 &&
+            //         distance.left >= 0 &&
+            //         distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            //         distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+            //     );
+            // };
+            //
+            // var findMe = document.querySelector('.counter-start');
+            //
+            // window.addEventListener('scroll', function (event) {
+            //     if (isInViewport(findMe)) {
+            //         setTimeout(function () {
+            //             odometer1.innerHTML = 99999;
+            //             odometer2.innerHTML = 99999;
+            //         }, 100);
+            //     }
+            // }, false);
+
+
+
+                    var v = 123456;
+                    var o = new Odometer({
+                        el: this,
+                        value: 123456,
+                        theme: 'minimal'
+,
+                        selector: '.my-numbers', // Change the selector used to automatically find things to be animated
+                        format: '( ddd).dd',),
+                        animation: 'count'
+                        });
+
+                    o.render();
+                    setInterval(function(){
+                        o.update(v++);
+                    }, 3000);
+
+        })
+    </script>
+@endpush

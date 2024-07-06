@@ -78,6 +78,12 @@ footer {}
     margin-top: 40rem;
   }
 }
+.mb-40 {
+  margin-bottom: 40rem;
+  @include md {
+    margin-bottom: 40rem;
+  }
+}
 .mb-30 {
   margin-bottom: 30rem;
   @include md {
@@ -172,6 +178,11 @@ footer {}
   }
 }
 
+a {
+  &:hover {
+    color:$orange !important;
+  }
+}
 * {
   transition: all .3s ease-in-out;
 }

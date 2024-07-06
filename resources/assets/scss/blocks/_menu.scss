@@ -49,7 +49,8 @@
       display:none;
     }
     &.active, &:hover {
-      text-decoration: underline;
+      //text-decoration: underline;
+      color:$orange;
     }
     &>i {
       background: $white;
@@ -139,6 +140,9 @@
       position:relative;
       align-items: center;
       display: flex;
+      &.active  i {
+        transform: rotate(180deg);
+      }
       &:hover {
         cursor:pointer;
         //&>i {
@@ -164,14 +168,15 @@
       }
       &-lists {
         position: absolute;
-        left: 0;
+        transform: translateX(-50%);
+        left: 50%;
         top: 30rem;
         background-color: $white;
         border:1px solid $white;
         border-radius:5px;
-        width: 100%;
+        //width: 100%;
         z-index: 100;
-        padding: 5rem;
+        padding: 10rem 24rem;
         box-shadow: $shadow;
         display:none;
         @include md {
@@ -184,7 +189,7 @@
           color: $main-grey;
           font-size: 20rem;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           line-height: normal;
           display: block;
           text-transform: uppercase;
@@ -229,7 +234,8 @@
         text-transform: uppercase;
         margin-right: 40rem;
         &.active, &:hover {
-          text-decoration: underline;
+          //text-decoration: underline;
+          color:$orange;
         }
       }
 
@@ -312,7 +318,8 @@
            margin-bottom:20px;
          }
          &.active, &:hover {
-           text-decoration: underline;
+           //text-decoration: underline;
+           color:$orange;
          }
        }
      }
@@ -326,6 +333,9 @@
        cursor:pointer;
        display: flex;
        margin-top:40px;
+       &.active  i {
+         transform: rotate(180deg);
+       }
        & i {
          margin-left: 5px;
          height: 75%;
@@ -344,15 +354,16 @@
          }
        }
        & .lang-lists {
+         transform: translateX(-50%);
          position: absolute;
-         left: 0;
+         left: 50%;
          top: 30px;
          background-color: $white;
          border:1px solid $white;
          border-radius:5px;
-         width: 100%;
+         //width: 100%;
          z-index: 100;
-         padding: 5rem;
+         padding: 10rem 24rem;
          display:none;
        }
        & .lang-list {
@@ -385,7 +396,8 @@
        line-height: normal;
        text-transform: uppercase;
        &.active, &:hover {
-         text-decoration: underline;
+         //text-decoration: underline;
+         color:$orange;
        }
        &>i {
          background: $white;

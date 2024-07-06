@@ -55,6 +55,9 @@ html {
   @media all and (max-width: #{$mobile}px) {
     font-size: calc(100vw/#{$mobile});
   }
+  @media all and (max-width: 576px) {
+    font-size: calc(100vw/576);
+  }
   @media all and (max-width: #{$ultra-mobile}px) {
     font-size: calc(100vw/#{$ultra-mobile});
   }

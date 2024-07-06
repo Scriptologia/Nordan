@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ env('APP_DOMAIN') }} }</title>
+    <title>{{ env('APP_URL') }} </title>
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    @stack('css')
 </head>
 <body>
     @include('partials.header')
@@ -19,7 +20,6 @@
     @yield('content')
 
     @include('partials.footer')
-@stack('script')
 <script src="{{asset('js/jquery-1.3.5.min.js')}}" ></script>
 <script src="{{asset('js/wow.js')}}" ></script>
 {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>--}}
@@ -30,8 +30,10 @@
     let w = new WOW().init();
 
     let route = {
-        catalog: @json(route('catalog'))
+        catalog: @json(route('catalog')),
+        url: @json(route('catalog'))
     };
 </script>
+    @stack('script')
 </body>
 </html>

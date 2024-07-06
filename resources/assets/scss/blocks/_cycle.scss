@@ -1,6 +1,9 @@
 .cycle {
   width: 445rem;
   overflow:hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   @include md(){
     width: 49%;
     &:nth-child(1){
@@ -21,6 +24,19 @@
   }
   &:nth-child(even) &-div{
     background: $yellow2;
+  }
+
+  &:nth-child(1) &-div  {
+    aspect-ratio: 2.97;
+  }
+  &:nth-child(2)  &-div {
+    aspect-ratio: 2.225;
+  }
+  &:nth-child(3)  &-div {
+    aspect-ratio: 1.987;
+  }
+  &:nth-child(4)  &-div {
+    aspect-ratio:1.48;
   }
   &-img {
     width: 240rem;
@@ -48,7 +64,6 @@
     @include usd(){}}
   &-div {
     width: 100%;
-    aspect-ratio:1.48;
     color:$white;
     display: flex;
     align-items: center;

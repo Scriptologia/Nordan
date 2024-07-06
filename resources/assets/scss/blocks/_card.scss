@@ -33,6 +33,10 @@
   }
   &>h5 {
     margin-bottom: 10rem;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   & > .description {
     color: $main;

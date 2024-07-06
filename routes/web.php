@@ -26,8 +26,10 @@ Route::get('/setlocale/{locale}', function ($locale, \Illuminate\Http\Request $r
 Route::group(['prefix' => SetLocale::getLocale()], function () {
     Route::get('/', 'IndexController@index')->name('index');
 //    Route::get('/catalog/{any?}', 'IndexController@catalog')->where('any', '.*')->name('catalog');
-    Route::any('/catalog', 'IndexController@apiGetProducts')->where('any', '.*')->name('catalog');
+    Route::any('/catalog/{any?}', 'IndexController@apiGetProducts')->where('any', '.*')->name('catalog');
     Route::get('/card/{product:slug}', 'IndexController@card')->name('card');
+    Route::get('/news', 'NewsController@index')->name('news');
+    Route::get('/news/{news:slug}', 'NewsController@show')->name('news-item');
 });
 
 

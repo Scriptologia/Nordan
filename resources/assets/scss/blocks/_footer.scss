@@ -96,7 +96,8 @@ footer {
           margin-bottom: 15rem;
         }
         &.active,&:hover {
-          text-decoration: underline;
+          //text-decoration: underline;
+          color:$orange;
         }
       }
     }
