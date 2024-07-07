@@ -39,13 +39,13 @@ return [
     'is_quality' => '<span>nordan</span>  значит качество',
     'cycle' => [
         'title' => 'Цикл <span>производства</span> обуви',
-        'text_1' => '<b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.',
+        'text_1' => '<b>Идея. </b>Наша модельеры постоянно изучают современные тренды и создают новые модели.',
         'etap_1' => '1 этап',
-        'text_2' => '<b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.',
+        'text_2' => '<b>Разработка модели. </b>Модели разрабатываются с учетом особенности стопы нынешнего поколения на основе современных технологий',
         'etap_2' => '2 этап',
-        'text_3' => '<b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.',
+        'text_3' => '<b>Производство. </b>Производство осуществляется на европейском оборудовании при контроле качества технологов с многолетним стажем работы.',
         'etap_3' => '3 этап',
-        'text_4' => '<b>Идея. </b>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula.',
+        'text_4' => '<b>Продажа. </b>Продажи осуществляется по всем каналам продажи оффлайн и онлайн по всему миру',
         'etap_4' => '4 этап',
         ],
     'nature' => [
@@ -114,5 +114,6 @@ return [
     ],
     'main' => 'главная',
     'show_all' => 'показать все',
+    'advantages' => 'преимущества',
 
 ];

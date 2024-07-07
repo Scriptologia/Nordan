@@ -3,12 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ env('APP_URL') }} </title>
+    <title>{{ setting('site.title'.'_'.app()->getLocale()) }} </title>
     <meta name="Keywords" content="" />
-    <meta name="Description" content="" />
+    <meta name="Description" content="{{setting('site.description'.'_'.app()->getLocale())}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="shortcut icon" href="{{asset('logo-32.png')}}" />
+    <link rel="shortcut icon" href="{{asset('images/img/logo.png')}}" />
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">

@@ -6,14 +6,6 @@
                     <a href="{{route('index')}}"><img src="{{asset('images/img/logo.png')}}" alt=""><img src="{{asset('images/img/logo-text.png')}}" alt=""></a>
                 </div>
                 {!! menu('header', 'partials.menu') !!}
-                {{--<div class="menu">--}}
-                    {{--<a href="#" class="menu_item active">Мужская</a>--}}
-                    {{--<a href="#" class="menu_item">Женская</a>--}}
-                    {{--<a href="#" class="menu_item">детская</a>--}}
-                    {{--<a href="#" class="menu_item">Спортивная</a>--}}
-                    {{--<a href="#" class="menu_item">Аксессуары</a>--}}
-                    {{--<a href="#" class="menu_item">Поддержка</a>--}}
-                {{--</div>--}}
                 <a href="mailto:mailmail@gmail.com" class="header-mail"><I class="icon-li-mail"></I>mailmail@gmail.com</a>
                 <div class="header-right">
                     <div class="search">

@@ -186,3 +186,8 @@ a {
 * {
   transition: all .3s ease-in-out;
 }
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  font-family: "Golos_Text" !important;
+  line-height: 90% !important;
+}

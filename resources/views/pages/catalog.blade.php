@@ -47,15 +47,28 @@
                             </div>
                         </div>
                         @endif
-                        <div class="input-group" id="waterproof">
-                            <h5>@lang('text.waterproof')</h5>
-                            <div class="flex">
-                                <label class="container">@lang('text.with_tex')
-                                    <input type="checkbox" name="waterproof">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
+                        {{--<div class="input-group" id="waterproof">--}}
+                            {{--<h5>@lang('text.waterproof')</h5>--}}
+                            {{--<div class="flex">--}}
+                                {{--<label class="container">@lang('text.with_tex')--}}
+                                    {{--<input type="checkbox" name="waterproof">--}}
+                                    {{--<span class="checkmark"></span>--}}
+                                {{--</label>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                            @if(count($advantages))
+                                <div class="input-group" id="advantages">
+                                    <h5>@lang('text.advantages')</h5>
+                                    <div class="column">
+                                        @foreach($advantages as $advantage)
+                                            <label class="container">{{$advantage->name}}
+                                                <input type="checkbox" name="advantages[]" value="{{$advantage->slug}}">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            @endif
                         @if(count($colors))
                         <div class="input-group" id="colors">
                             <h5>@lang('text.colors')</h5>

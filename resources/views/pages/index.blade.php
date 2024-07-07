@@ -8,9 +8,9 @@
                 <div class="news">
                     <div class="news-left">
                         <h2>произведено</h2>
-                        <div class="counter odometer counter-start" id="odometer1">89993</div>
+                        <div class="counter odometer counter-start" id="odometer1"></div>
                         <h2>продано</h2>
-                        <div class="counter odometer counter-start" id="odometer2">79893</div>
+                        <div class="counter odometer counter-start" id="odometer2"></div>
                     </div>
                     <div class="news-right">
                         <h2>Новости</h2>
@@ -18,7 +18,7 @@
                             {{--@dd($news)--}}
                             <div class="news_item">
                                 <div class="news_item-left">
-                                    <img src="{{asset('images/img/image4.png')}}" alt="">
+                                    {{$news->getFirstMedia('img') }}
                                 </div>
                                 <div class="news_item-right">
                                     <h5>{{$news->getTranslatedAttribute('title')}}</h5>
@@ -111,7 +111,7 @@
                 <div class="flex">
                     <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0.75s">
                         <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.75s">
-                            <img src="{{asset('images/img/cycle.jpg')}}" alt="">
+                            <img src="{{asset('images/img/cycle1.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0.75s">@lang('text.cycle.text_1')</div>
                         <div class="cycle-div">
@@ -120,7 +120,7 @@
                     </div>
                     <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay=".5s">
                         <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
-                            <img src="{{asset('images/img/cycle.jpg')}}" alt="">
+                            <img src="{{asset('images/img/cycle2.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".5s">@lang('text.cycle.text_2')</div>
                         <div class="cycle-div">
@@ -129,7 +129,7 @@
                     </div>
                     <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay=".25s">
                         <div class="cycle-img wowanimate__fadeIn" data-wow-duration="2s" data-wow-delay="1.25s">
-                            <img src="{{asset('images/img/cycle.jpg')}}" alt="">
+                            <img src="{{asset('images/img/cycle3.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay=".25s">@lang('text.cycle.text_3')</div>
                         <div class="cycle-div">
@@ -138,7 +138,7 @@
                     </div>
                     <div class="cycle wow animate__slideInUp" data-wow-duration="2s" data-wow-delay="0">
                         <div class="cycle-img wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">
-                            <img src="{{asset('images/img/cycle.jpg')}}" alt="">
+                            <img src="{{asset('images/img/cycle4.jpg')}}" alt="">
                         </div>
                         <div class="cycle-text wow animate__fadeIn" data-wow-duration="2s" data-wow-delay="0">@lang('text.cycle.text_4')</div>
                         <div class="cycle-div">
@@ -202,45 +202,34 @@
     <script src="{{asset('js/counter.js')}}"></script>
     <script>
         $(document).ready(function() {
-            // var isInViewport = function (elem) {
-            //     var distance = elem.getBoundingClientRect();
-            //     return (
-            //         distance.top >= 0 &&
-            //         distance.left >= 0 &&
-            //         distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            //         distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-            //     );
-            // };
-            //
-            // var findMe = document.querySelector('.counter-start');
-            //
-            // window.addEventListener('scroll', function (event) {
-            //     if (isInViewport(findMe)) {
-            //         setTimeout(function () {
-            //             odometer1.innerHTML = 99999;
-            //             odometer2.innerHTML = 99999;
-            //         }, 100);
-            //     }
-            // }, false);
-
-
-
-                    var v = 123456;
+            var el1 = document.querySelector('#odometer1');
+                    var v1 = 4085429;
                     var o = new Odometer({
-                        el: this,
-                        value: 123456,
-                        theme: 'minimal'
-,
-                        selector: '.my-numbers', // Change the selector used to automatically find things to be animated
-                        format: '( ddd).dd',),
+                        el: el1,
+                        value: 0,
+                        theme: 'minimal',
+                        selector: '#odometer1', // Change the selector used to automatically find things to be animated
+                        format: '( ddd) dd',
+                        animation: 'count'
+                        });
+            var el2 = document.querySelector('#odometer2');
+                    var v2 = 4909542;
+                    var o2 = new Odometer({
+                        el: el2,
+                        value: 0,
+                        theme: 'minimal',
+                        selector: '#odometer2', // Change the selector used to automatically find things to be animated
+                        format: '( ddd) dd',
                         animation: 'count'
                         });
 
-                    o.render();
+                    o.render(); o2.render();
                     setInterval(function(){
-                        o.update(v++);
-                    }, 3000);
-
+                        o.update(v1++);
+                    }, 6000);
+                    setInterval(function(){
+                        o2.update(v2++);
+                    }, 8000);
         })
     </script>
 @endpush

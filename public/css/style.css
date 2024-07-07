@@ -565,6 +565,11 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  font-family: "Golos_Text" !important;
+  line-height: 90% !important;
+}
+
 /*главное меню*/
 .header {
   padding: 20rem 0;
@@ -2996,6 +3001,7 @@ footer {
 @media screen and (max-width: 768px) {
   .news-left {
     margin-bottom: 40rem;
+    margin-right: unset;
   }
 }
 .news-left > h2 {
@@ -3010,7 +3016,7 @@ footer {
   background: #404040;
   padding: 40rem;
   align-items: center;
-  font-size: 112rem;
+  font-size: 80rem;
   font-weight: 700;
   line-height: 80%;
 }
