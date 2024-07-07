@@ -1,0 +1,26 @@
+.breadcrumbs {
+  &_link {
+    color: $grey2;
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  &_separator {
+    color: $grey2;
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin:0 10rem;
+  }
+  &_item {
+    color: $grey2;
+    font-size: 16rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+}
