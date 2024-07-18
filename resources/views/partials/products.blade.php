@@ -1,10 +1,18 @@
 @php
     $locale = app()->getLocale();
 @endphp
+
 @forelse ($products as $product)
     <div class="product">
         <div class="product-img">
-            {{$product->getFirstMedia('images') }}
+            <div class="product-slider">
+            @forelse ($product->getMedia('images') as $image)
+                <img src="{{$image->getUrl()}}" alt="">
+                @empty
+                @endforelse
+            </div>
+            <div class="product-slider_arrow prev"><i class="icon-li-arrow2"></i></div>
+            <div class="product-slider_arrow next"><i class="icon-li-arrow2"></i></div>
         </div>
         <h5>{!! $product->translate($locale)->name !!}</h5>
         <div class="description">{{$product->type->translate($locale)->name}}, {{$product->collection->translate($locale)->name}}</div>

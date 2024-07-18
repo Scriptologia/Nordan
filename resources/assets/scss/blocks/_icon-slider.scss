@@ -22,7 +22,8 @@
       & > img {
         object-fit: contain;
         width: auto;
-        height:30%;
+        height: 42%;
+        align-self: self-start;
       }
       & .link {
         color: $main;

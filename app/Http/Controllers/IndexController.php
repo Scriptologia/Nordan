@@ -18,7 +18,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $mainslider = Slider::get();
+        $mainslider = Slider::withTranslation(app()->getLocale())->get();
         $news = News::withTranslation(app()->getLocale())->latest()->first();
         return view('pages.index', compact('mainslider', 'news'));
     }

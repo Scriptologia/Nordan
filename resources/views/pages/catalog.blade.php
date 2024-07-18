@@ -69,19 +69,19 @@
                                     </div>
                                 </div>
                             @endif
-                        @if(count($colors))
-                        <div class="input-group" id="colors">
-                            <h5>@lang('text.colors')</h5>
-                            <div class="flex">
-                                @foreach($colors as $color)
-                                <label class="container">{{$color->name}}
-                                    <input type="checkbox" name="colors[]" value="{{$color->slug}}">
-                                    <span class="checkmark"></span>
-                                </label>
-                                @endforeach
-                            </div>
-                        </div>
-                        @endif
+                        {{--@if(count($colors))--}}
+                        {{--<div class="input-group" id="colors">--}}
+                            {{--<h5>@lang('text.colors')</h5>--}}
+                            {{--<div class="flex">--}}
+                                {{--@foreach($colors as $color)--}}
+                                {{--<label class="container">{{$color->name}}--}}
+                                    {{--<input type="checkbox" name="colors[]" value="{{$color->slug}}">--}}
+                                    {{--<span class="checkmark"></span>--}}
+                                {{--</label>--}}
+                                {{--@endforeach--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--@endif--}}
                         @if(count($markets))
                         <div class="input-group" id="markets">
                             <h5>@lang('text.marketplaces')</h5>
@@ -116,6 +116,7 @@
        route.url = @json($url);
 
        $(document).ready(function() {
+           sliderInit();
            if (typeof queryArray !== "undefined" && queryArray) {
                setFilters(queryArray);
                history.pushState(null, null, decodeURI(route.url));
@@ -147,6 +148,26 @@
             })
         }
 
+
+      function sliderInit() {
+               $('.product-slider').each((i, el) => {
+                   $(el).slick({
+                       dots: false,
+                       infinite: true,
+                       // adaptiveHeight: true,
+                       // centerMode: true,
+                       // variableWidth: true,
+                       speed: 300,
+                       // arrows:true,
+                       autoplay: false,
+                       prevArrow: $(el).parents('.product-img').find('.product-slider_arrow.prev'),
+                       nextArrow: $(el).parents('.product-img').find('.product-slider_arrow.next'),
+                       slidesToScroll: 1,
+                       slidesToShow: 1,
+                   });
+               })
+           }
+
         $('#form-catalog').on('change', function(e) {
             e.preventDefault();
             let data = $('#form-catalog').serialize()
@@ -157,6 +178,7 @@
                     $('.catalog-items .paginator').remove()
                     $('.catalog-items').append(response.paginatorHTML)
                     setFilters(response.queryArray)
+                    sliderInit();
                     history.pushState(null, null, decodeURI(response.url));
                 }
                 else {

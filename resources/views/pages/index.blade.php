@@ -226,10 +226,10 @@
                     o.render(); o2.render();
                     setInterval(function(){
                         o.update(v1++);
-                    }, 6000);
+                    }, 1000);
                     setInterval(function(){
                         o2.update(v2++);
-                    }, 8000);
+                    }, 2000);
         })
     </script>
 @endpush
